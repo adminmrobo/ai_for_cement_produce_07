@@ -54,24 +54,24 @@
 | 항목 | 내용 |
 |---|---|
 | 판 · 크기 | G · 960×540 |
-| 구도 | 가운데 봉인관이 봉투 두 개(K5·K6를 뜻함, 글자 없이 노란 봉투)를 금고 앞에서 지킴. 왼쪽 초파리가 오른쪽을 보며 봉투를 가리킴, 오른쪽 Money-Robo가 왼쪽을 보며 봉투를 힐끔 봄 |
+| 구도 | 가운데 봉인관이 봉투 두 개(K5·K6를 뜻함, 글자 없이 노란 봉투)를 금고 앞에서 지킴. 왼쪽 초파리가 오른쪽을 보며 봉투를 가리킴, 오른쪽 주판봇이 왼쪽을 보며 봉투를 힐끔 봄 |
 | 소품 | 작은 원형 금고, 봉투 두 개, 줄무늬 서류 더미 |
 | 피할 것 | 승패 암시, 글자 |
-| 대체 글 | 봉인관 부엉이가 금고 앞에서 노란 봉투 두 개를 지키고 초파리 연구원과 Money-Robo가 양쪽에서 바라보는 장면 |
+| 대체 글 | 봉인관 부엉이가 금고 앞에서 노란 봉투 두 개를 지키고 초파리 연구원과 주판봇이 양쪽에서 바라보는 장면 |
 
 ```
-16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, cozy night laboratory mood, purple light, soft magenta and green fluorescent accents, 16:9 illustration panel, a small brown owl with round gold glasses standing in front of a small round vault guarding two sealed yellow envelopes, on the left an anthropomorphic fruit fly researcher with big red compound eyes, a blue helmet with a gold stripe, white lab coat over a black vest, black gloves, facing right and pointing at the envelopes, on the right a round white floating robot with yellow pixel eyes and a blue chest light facing left glancing at the envelopes curiously, stacks of papers with blank striped pages, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
+16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, cozy night laboratory mood, purple light, soft magenta and green fluorescent accents, 16:9 illustration panel, a small brown owl with round gold glasses standing in front of a small round vault guarding two sealed yellow envelopes, on the left an anthropomorphic fruit fly researcher with big red compound eyes, a blue helmet with a gold stripe, white lab coat over a black vest, black gloves, facing right and pointing at the envelopes, on the right JUPANBOT (AbaBot), the boxy beige retro CRT-monitor robot with a dark green screen face with mint pixel eyes and mouth, a short antenna topped with a red-brown abacus bead, gray segmented arms and two small tank treads facing left glancing at the envelopes curiously, stacks of papers with blank striped pages, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands, no white round robot head, no yellow or golden eyes, no floating robot, no gold coins
 ```
 
 ### 3-3. `sc_cement_outro` — 아웃트로 (결과 F)
 | 항목 | 내용 |
 |---|---|
 | 판 · 크기 | E · 1200×800 |
-| 구도 | 승자 초파리가 앞 왼쪽에서 팔짱, Money-Robo는 뒤 오른쪽에서 머쓱하게 금화를 주머니에 넣는 몸짓(조롱 없음), 박사 가운데 뒤에서 엄지, 조수가 시험 생산 일정표(빈 칸 격자)를 들고 있음. 창밖 가마 불빛 |
-| 대체 글 | 대결이 끝난 뒤 품질실에서 초파리 연구원이 팔짱을 끼고 Money-Robo가 머쓱해하며 조수가 시험 생산 일정표를 든 장면 |
+| 구도 | 승자 초파리가 앞 왼쪽에서 팔짱, 주판봇은 뒤 오른쪽에서 머쓱하게 나무 주판을 옆구리에 끼는 몸짓(조롱 없음), 박사 가운데 뒤에서 엄지, 조수가 시험 생산 일정표(빈 칸 격자)를 들고 있음. 창밖 가마 불빛 |
+| 대체 글 | 대결이 끝난 뒤 품질실에서 초파리 연구원이 팔짱을 끼고 주판봇이 머쓱해하며 조수가 시험 생산 일정표를 든 장면 |
 
 ```
-16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, cozy night laboratory mood, purple light, warm orange kiln glow through a window, 3:2 landscape scene, medium brightness, a night-time quality control room inside a cement plant, in front on the left an anthropomorphic fruit fly researcher with big red compound eyes and a blue helmet with a gold stripe, white lab coat over a black vest, arms crossed with a satisfied look, behind on the right a round white floating robot with yellow pixel eyes and a blue chest light shrugging and tucking a gold coin away, good-natured, a chibi scientist with thin teal rectangular glasses, black hair with one white streak and a short ponytail, white lab coat over black vest and tie, at the back center giving a thumbs up, a girl researcher with long pink hair in two round buns and a navy streak holding a blank grid schedule board, shelves of grey cement test cubes, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
+16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, cozy night laboratory mood, purple light, warm orange kiln glow through a window, 3:2 landscape scene, medium brightness, a night-time quality control room inside a cement plant, in front on the left an anthropomorphic fruit fly researcher with big red compound eyes and a blue helmet with a gold stripe, white lab coat over a black vest, arms crossed with a satisfied look, behind on the right JUPANBOT (AbaBot), the boxy beige retro CRT-monitor robot with a dark green screen face with mint pixel eyes and mouth, a short antenna topped with a red-brown abacus bead, gray segmented arms and two small tank treads shrugging and tucking its wooden abacus under one arm, good-natured, a chibi scientist with thin teal rectangular glasses, black hair with one white streak and a short ponytail, white lab coat over black vest and tie, at the back center giving a thumbs up, a girl researcher with long pink hair in two round buns and a navy streak holding a blank grid schedule board, shelves of grey cement test cubes, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands, no white round robot head, no yellow or golden eyes, no floating robot, no gold coins
 ```
 
 ### 3-4. `bg_cement` (P3) — 히어로 배경

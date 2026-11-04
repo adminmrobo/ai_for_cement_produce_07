@@ -2,7 +2,7 @@
 
 > 28일을 기다리지 않고, 오늘 만든 시멘트의 강도를 믿을 만한 숫자로 말할 수 있을까?
 
-회귀·분류 모델로 시멘트 **28일 압축강도**와 **불량**을 예측하는 4단계 실습입니다. 생성 AI에 프롬프트를 주고, 받은 코드를 Google Colab에서 실행하고, 결과를 공정 엔지니어의 눈으로 읽습니다. 박사 · 조수 · 초파리 연구원 · Money-Robo가 진행하는 연구실 해설 대시보드 형식입니다.
+회귀·분류 모델로 시멘트 **28일 압축강도**와 **불량**을 예측하는 4단계 실습입니다. 생성 AI에 프롬프트를 주고, 받은 코드를 Google Colab에서 실행하고, 결과를 공정 엔지니어의 눈으로 읽습니다. 박사 · 조수 · 초파리 연구원 · 주판봇이 진행하는 연구실 해설 대시보드 형식입니다.
 
 **▶ 바로 보기:** https://adminmrobo.github.io/cement_quality_ai/
 
@@ -84,5 +84,5 @@ cement_quality_ai/
 ## 저작권
 
 - 글·실습 구성: 안상선 ((주)M-Robo)
-- 캐릭터(박사, 조수, 초파리 연구원, Money-Robo)의 이름·설정·그림: 저작권 안상선((주)M-Robo). 허락 없이 쓸 수 없습니다. 원본: [fruitfly-lab-expressions](https://github.com/adminmrobo/fruitfly-lab-expressions)
+- 캐릭터(박사, 조수, 초파리 연구원, 주판봇)의 이름·설정·그림: 저작권 안상선. 허락 없이 쓸 수 없습니다. 원본: [fruitfly-lab-expressions](https://github.com/adminmrobo/fruitfly-lab-expressions)
 - 데이터와 원가 단가는 교육용 가상값이며 실제 공장의 수치가 아닙니다.
