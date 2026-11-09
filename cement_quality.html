@@ -225,6 +225,49 @@ table.tb{border-collapse:collapse;width:100%;font-size:14.5px;min-width:520px}
 footer{border-top:1px solid var(--rule);padding:40px 0 90px;color:var(--muted);font-size:14px}
 footer h3{color:var(--text)}
 svg text{font-family:"IBM Plex Sans KR",system-ui,sans-serif}
+
+/* ===== 쉬운 풀어쓰기판 (2026-11-09) ===== */
+.talk{background:var(--panel);border:1px solid var(--rule);border-radius:18px;padding:4px 16px 10px;margin:22px 0}
+.talk>.tt{font-size:13px;color:var(--muted);margin:10px 0 0}
+.talk .say{margin:12px 0;max-width:none}
+.zam{position:relative;background:linear-gradient(135deg,rgba(224,138,74,.13),rgba(241,182,70,.05));border:2px dashed rgba(224,138,74,.65);border-radius:18px;padding:16px 18px 14px;margin:24px 0}
+.zam>.zt{display:inline-block;font-weight:700;color:#ffb36b;font-size:14px;letter-spacing:.02em}
+.zam>.zt::before{content:"✋ "}
+.zam h4{font-size:19px;margin:6px 0 8px;color:var(--text)}
+.zam p,.zam li{font-size:15.5px}
+.zam p{margin:.45em 0}
+.zam ul,.zam ol{margin:.3em 0;padding-left:1.3em}
+.zam.ai{background:linear-gradient(135deg,rgba(130,184,255,.12),rgba(130,184,255,.04));border-color:rgba(130,184,255,.6)}
+.zam.ai>.zt{color:var(--info)}
+.zam .fun{background:var(--panel2);border-left:3px solid #ffb36b;border-radius:10px;padding:8px 12px;margin-top:10px;font-size:14.5px}
+.zam .fun::before{content:"😮 재밌는 사실 · ";font-weight:700;color:#ffb36b}
+.story{background:rgba(255,134,184,.07);border:1px solid rgba(255,134,184,.5);border-radius:18px;padding:14px 18px;margin:24px 0}
+.story .sthead{display:flex;gap:12px;align-items:center}
+.story .sthead img{width:56px;height:56px;flex:0 0 56px;border-radius:14px;border:2px solid var(--c-asst);background:var(--panel2);object-fit:contain}
+.story .st{font-size:13px;font-weight:700;color:var(--c-asst)}
+.story h4{margin:2px 0 0;font-size:18px}
+.story>p{font-size:15.5px}
+.story ol.beats{counter-reset:b;list-style:none;padding:0;margin:8px 0}
+.story ol.beats li{counter-increment:b;position:relative;padding:9px 12px 9px 46px;margin:7px 0;background:var(--panel);border:1px solid var(--rule);border-radius:12px;font-size:15.5px}
+.story ol.beats li::before{content:counter(b);position:absolute;left:11px;top:9px;width:25px;height:25px;border-radius:50%;background:var(--c-asst);color:#2a1020;display:grid;place-items:center;font-weight:700;font-size:13px}
+.story .formal{font-size:13.5px;color:var(--muted);border-top:1px dashed var(--rule);padding-top:8px;margin-top:8px;overflow-x:auto}
+.story .big{font-size:17px;font-weight:700;color:var(--text)}
+.fig{margin:22px 0;background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+.fig img{display:block;width:100%;height:auto}
+.fig .ph{display:none;min-height:150px;place-items:center;text-align:center;padding:18px;color:var(--muted);font-size:14px;background:repeating-linear-gradient(45deg,var(--panel2) 0 14px,var(--panel) 14px 28px)}
+.fig .ph span{font-size:12.5px;opacity:.8}
+.fig.noimg img{display:none}.fig.noimg .ph{display:grid}
+.fig figcaption{padding:8px 14px;font-size:13.5px;color:var(--muted)}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:12px 0}
+.mini>div{background:var(--panel2);border:1px solid var(--rule);border-radius:12px;padding:10px 12px;font-size:14.5px}
+.mini b{display:block;color:var(--amber);font-size:15.5px;margin-bottom:2px}
+.mini i{font-style:normal;color:var(--muted);font-size:13px}
+details.chk{background:rgba(94,227,156,.06);border:1px solid rgba(94,227,156,.4);border-radius:12px;padding:10px 14px;margin:12px 0}
+details.chk summary{cursor:pointer;color:var(--gfp);font-weight:500}
+details.chk p{margin:.5em 0 0}
+.easy-badge{display:inline-block;font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:999px;background:rgba(255,134,184,.16);color:var(--c-asst);margin-left:6px;vertical-align:middle}
+@media (max-width:640px){.story ol.beats li{padding-left:40px}.zam,.story,.talk{padding-left:13px;padding-right:13px}}
+
 </style>
 </head>
 <body>
@@ -232,7 +275,7 @@ svg text{font-family:"IBM Plex Sans KR",system-ui,sans-serif}
 <nav class="top" aria-label="섹션 바로가기">
   <a class="logo" href="#top"><i></i>연구실 · 제조 AI</a>
   <div class="links">
-    <a href="index.html">목차</a><a href="#why">왜</a><a href="#data">데이터</a><a href="#lv1">① 첫 모델</a><a href="#lv2">② 믿어도 되나</a><a href="#lv3">③ 무엇이 정하나</a><a href="#lv4">④ 값을 붙이면</a><a href="#duel">대결</a><a href="#wrap">정리</a><a href="#kg">지식 색인</a><a href="#export">꾸러미</a>
+    <a href="index.html">목차</a><a href="#cement101">시멘트 첫걸음</a><a href="#ai101">AI 첫걸음</a><a href="#why">왜</a><a href="#data">데이터</a><a href="#lv1">① 첫 모델</a><a href="#lv2">② 믿어도 되나</a><a href="#lv3">③ 무엇이 정하나</a><a href="#lv4">④ 값을 붙이면</a><a href="#duel">대결</a><a href="#wrap">정리</a><a href="#kg">지식 색인</a><a href="#export">꾸러미</a>
   </div>
 </nav>
 
@@ -271,7 +314,7 @@ svg text{font-family:"IBM Plex Sans KR",system-ui,sans-serif}
     </div>
     <div class="dialog" aria-label="캐릭터 대화">
       <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>강도는 28일 뒤에 안다. 오늘 맞힐 수 있으면 출하도, 배합도 달라져요.</p></div></div>
-      <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">조수</b><p>입력은 여덟 개, 로트는 3,000개예요. 시드는 42로 고정했어요.</p></div></div>
+      <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>입력은 여덟 개, 로트는 3,000개예요. 시드는 42로 고정했어요.</p></div></div>
       <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>점수가 좋게 나오면, 그 점수부터 의심할 거야.</p></div></div>
       <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>점수가 높으면 투자 성공이지. 원가까지 깎으면 금상첨화고.</p></div></div>
     </div>
@@ -294,6 +337,157 @@ svg text{font-family:"IBM Plex Sans KR",system-ui,sans-serif}
     <div><b class="n">2</b><h4>그림은 직접 움직인다</h4><p class="small">버튼과 막대를 움직이면 숫자와 그림이 함께 바뀐다. 노란 도장이 찍힌 그림은 설명용 모형이다.</p></div>
     <div><b class="n">3</b><h4>프롬프트와 코드는 접혀 있다</h4><p class="small">각 단계의 "실습 프롬프트"와 "코드"를 펼쳐 복사하면 Colab에서 같은 숫자를 얻는다.</p></div>
   </div>
+</div>
+</section>
+
+
+<!-- ===================== 0-1 시멘트 첫걸음 (쉬운 풀어쓰기판) ===================== -->
+<section class="level" id="cement101">
+<div class="wrap">
+  <div class="lvhead">
+    <div class="hexno">0-1<small>준비</small></div>
+    <h2>시멘트 첫걸음 — 회색 가루의 정체부터 <span class="easy-badge">처음 읽는 사람용</span></h2>
+  </div>
+  <p class="sub">AI 이야기를 하기 전에, 우리가 맞히려는 대상부터 알아야 한다. 시멘트가 무엇으로, 어떻게 만들어지고, 왜 "28일 강도"가 성적표인지 연구실 식구들의 대화로 따라가 본다. 시멘트를 한 번도 생각해 본 적 없어도 괜찮다.</p>
+<div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 연구실 아침, 조수(하루)가 고백한다</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="firm" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>박사님, 고백할 게 있어요. 오늘 강의 주제가 시멘트인데… 저 시멘트가 뭔지 잘 몰라요. 그냥 회색 가루? 공사장에서 섞는 그거?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>좋은 출발이에요. 오늘 수강생 대부분도 그 정도에서 시작해요. 회색 가루 맞아요. 다만 그 가루가 <b>물을 만나면 돌처럼 굳는</b> 아주 특별한 가루라는 게 핵심이죠.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="magnify" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>물을 만나면 굳는다고? 보통 가루는 물에 녹거나 젖기만 하잖아. 밀가루는 반죽이 되고, 설탕은 녹고.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>바로 그 차이예요. 시멘트는 물과 <b>화학 반응</b>을 해서 새로운 단단한 결정을 만들어요. 물이 마르는 게 아니라, 물이 시멘트 속에 들어가 <b>돌의 일부</b>가 되는 거예요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>그래서 그 가루가 얼마야? 아파트 한 채에 몇 톤이나 들어가? 원가부터 알아야 내가 일을 하지.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>주판봇은 4부까지 기다려요. 오늘은 순서대로 갑니다. ① 시멘트가 무엇인지 ② 어떻게 만드는지 ③ 무엇이 강도를 정하는지 ④ 강도를 어떻게 재는지. 이 네 가지만 알면 AI 실습의 숫자가 전부 '말'이 돼요.</p></div></div>
+</div><figure class="fig"><img src="img/F01_cement_mortar_concrete.webp" alt="시멘트 가루, 모래를 섞은 몰탈, 자갈까지 섞은 콘크리트를 세 접시에 나란히 놓고 캐릭터들이 비교하는 장면" onerror="this.parentNode.classList.add('noimg')"><div class="ph">그림 자리 · F01_cement_mortar_concrete<br><span>(그림 준비 중 · img/F01_cement_mortar_concrete.webp)</span></div><figcaption>그림 F01 — 시멘트 · 몰탈 · 콘크리트, 세 형제 비교</figcaption></figure><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ①</span><h4>시멘트, 몰탈, 콘크리트는 어떻게 다를까?</h4>
+  <p>셋은 자주 헷갈리지만 관계는 단순하다. <b>시멘트는 접착제</b>이고, 나머지 둘은 그 접착제로 무엇을 붙였느냐의 차이다.</p>
+  <div class="mini">
+    <div><b>시멘트</b>회색 가루. 물을 만나면 굳는 접착제. 혼자서는 거의 쓰지 않는다. <i>김밥으로 치면 밥풀</i></div>
+    <div><b>몰탈(모르타르)</b>시멘트 + 물 + 모래. 벽돌 사이를 메우고 벽을 바를 때 쓴다. <i>밥풀에 깨를 섞은 것</i></div>
+    <div><b>콘크리트</b>시멘트 + 물 + 모래 + 자갈. 건물 기둥, 다리, 댐의 몸통. <i>밥풀로 단무지·햄까지 붙여 만 김밥</i></div>
+  </div>
+  <p>모래와 자갈을 묶어서 <b>골재</b>라고 부른다. 콘크리트 부피의 대부분은 골재이고 시멘트는 일부지만, 골재끼리 서로 붙지 못하므로 시멘트가 없으면 콘크리트는 그냥 자갈 더미다. 그래서 <b>콘크리트의 힘은 결국 시멘트의 힘</b>에서 나온다. 오늘 우리가 시멘트의 강도를 미리 맞히려는 이유가 여기 있다.</p><div class="fun">우리가 흔히 "시멘트 벽"이라고 부르는 것은 대부분 콘크리트나 몰탈 벽이다. 시멘트 가루만으로 벽을 세운 집은 없다.</div></aside><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ②</span><h4>시멘트는 누가 처음 만들었을까?</h4>
+  <p>사람들은 아주 옛날부터 돌을 붙일 접착제를 찾았다. 이집트 피라미드에는 구운 석고가, 고대 로마의 건축물에는 <b>석회와 화산재를 섞은 반죽</b>이 쓰였다. 로마의 판테온 신전 지붕은 이 로마식 콘크리트로 만들어져 2천 년 가까이 버티고 있다.</p>
+  <p>지금 우리가 쓰는 시멘트의 직계 조상은 1824년 영국의 벽돌공 <b>조지프 애스프딘</b>이 특허를 낸 "포틀랜드 시멘트"다. 석회석과 점토를 섞어 높은 열로 구운 뒤 곱게 갈았더니, 굳은 색깔이 영국 남쪽 <b>포틀랜드 섬</b>에서 나는 고급 건축용 돌과 닮았다고 해서 붙은 이름이다. 오늘 실습의 시멘트도 이 포틀랜드 시멘트 계열이다.</p><div class="fun">"포틀랜드"는 회사 이름이나 제품 상표가 아니라 돌 이름에서 온 말이다. 그래서 전 세계 어느 회사가 만들어도 이 계열 시멘트는 모두 포틀랜드 시멘트라고 부른다.</div></aside>
+  <h3>시멘트는 어떻게 만들어질까 — 네 정거장</h3>
+<div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 공장 견학 버스에 탄 것처럼</p>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>시멘트 공장은 크게 네 정거장이에요. <b>원료 준비 → 굽기(소성) → 갈기(분쇄) → 시험</b>. 빵집과 거의 같아요. 재료를 섞고, 오븐에 굽고, 잘라 포장하고, 맛을 보죠.</p></div></div>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>빵집이면 저 자신 있어요! 그럼 시멘트 반죽의 밀가루는 뭐예요?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p><b>석회석</b>이에요. 원료의 약 80%가 석회석이고, 나머지를 점토·규석·철광석 같은 돌가루로 채워요. 석회석이 칼슘을, 점토와 규석이 규소와 알루미늄을, 철광석이 철을 대 주죠.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>그 돌가루를 굽는다고? 몇 도에서?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>약 <b>1,450 ℃</b>. 쇠도 벌겋게 달아오르는 온도예요. 거대한 원통형 가마(회전 킬른)가 천천히 돌면서 돌가루를 굴려 구워요. 그러면 반쯤 녹았다 굳은 <b>클링커</b>라는 검회색 구슬이 나와요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="chart" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>그 구슬을 그냥 팔면 안 돼? 굽는 데 연료를 그렇게 썼으면.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="judge" alt="" aria-hidden="true"><div><b class="name">박사</b><p>구슬로는 물과 반응할 겉넓이가 너무 작아요. 클링커에 <b>석고</b>를 조금 넣고 밀가루보다 곱게 갈아야 비로소 시멘트예요. 여기에 <b>슬래그</b> 같은 재료를 섞기도 하고요. 마지막으로 시편을 만들어 강도를 재요. 이게 품질 성적표예요.</p></div></div>
+</div><figure class="fig"><img src="img/F02_cement_plant_route.webp" alt="석회석 광산에서 원료를 캐고, 회전 가마에서 굽고, 분쇄기에서 갈고, 시험실에서 강도를 재는 네 정거장을 캐릭터들이 버스를 타고 지나가는 그림" onerror="this.parentNode.classList.add('noimg')"><div class="ph">그림 자리 · F02_cement_plant_route<br><span>(그림 준비 중 · img/F02_cement_plant_route.webp)</span></div><figcaption>그림 F02 — 시멘트 공장 네 정거장: 원료 → 굽기 → 갈기 → 시험</figcaption></figure><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ③</span><h4>원료 — 시멘트의 80%는 바다 생물의 흔적</h4>
+  <p>석회석은 아주 먼 옛날 바닷속 조개껍데기와 산호, 작은 생물들의 뼈(탄산칼슘)가 쌓여 굳은 돌이다. 시멘트 공장은 이 석회석을 실어 나르는 비용을 줄이려고 대개 <b>석회석 광산 바로 옆</b>에 세운다.</p>
+  <p>석회석(탄산칼슘)을 높은 열로 구우면 이산화탄소가 빠져나가고 <b>생석회(산화칼슘, CaO)</b>가 남는다. 이 생석회가 점토와 규석의 성분과 짝을 지어 새로운 광물을 만든다. 오늘 데이터의 <code>limestone_pct</code>(석회석 비율)는 이 반죽에 석회석을 얼마나 넣었는지다.</p><div class="fun">석회석을 구울 때 원료 자체에서 이산화탄소가 빠져나오기 때문에, 시멘트 산업은 세계 이산화탄소 배출의 큰 몫(흔히 7~8% 안팎으로 추산)을 차지한다. 그래서 클링커를 덜 쓰는 배합이 중요해지고 있다.</div></aside><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ④</span><h4>굽기 — 1,450 ℃ 가마 속에서 일어나는 일</h4>
+  <p>회전 가마는 길이가 수십 미터에 이르는, 살짝 기울어진 거대한 쇠 원통이다. 위쪽 입구로 돌가루를 넣으면 원통이 천천히 돌면서 가루가 아래쪽 불꽃을 향해 굴러 내려간다. 내려가는 동안 온도가 점점 오른다.</p>
+  <ol>
+    <li><b>수백 ℃</b> — 물기가 날아간다.</li>
+    <li><b>약 900 ℃ 전후</b> — 석회석이 이산화탄소를 내놓고 생석회가 된다.</li>
+    <li><b>약 1,450 ℃</b> — 일부가 녹아 끈적해지고, 그 안에서 칼슘과 규소가 만나 시멘트의 주인공 광물들이 자란다.</li>
+    <li><b>급히 식히기</b> — 뜨거운 구슬을 찬 바람으로 빨리 식혀야 좋은 광물이 그대로 붙잡힌다.</li>
+  </ol>
+  <p>오늘 데이터의 <code>kiln_temp</code>(소성 온도)가 바로 이 가마의 온도다. 너무 낮으면 덜 구워지고, 너무 높으면 연료비가 든다.</p><div class="fun">시멘트 가마는 한번 불을 붙이면 고장이나 정비 전까지 몇 달씩 쉬지 않고 돈다. 껐다 켜면 가마 안 내화벽돌이 온도 차로 상하기 때문이다.</div></aside><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑤</span><h4>클링커 4형제 — C₃S, C₂S, C₃A, C₄AF</h4>
+  <p>화학식처럼 생겨서 겁먹을 필요 없다. 시멘트 화학자들은 긴 이름을 줄여 부르는 <b>약속</b>을 쓴다. <b>C</b> = 산화칼슘(CaO), <b>S</b> = 이산화규소(SiO₂), <b>A</b> = 산화알루미늄(Al₂O₃), <b>F</b> = 산화철(Fe₂O₃). 그러니 C₃S는 "칼슘 셋, 규소 하나가 짝지은 광물"이라는 뜻일 뿐이다.</p>
+  <div class="mini">
+    <div><b>C₃S · 알라이트</b>클링커의 절반 이상. 물과 빨리 반응해 <b>초기~28일 강도</b>를 책임지는 주전 선수. <i>데이터 열: c3s_pct</i></div>
+    <div><b>C₂S · 벨라이트</b>느긋한 성격. 처음엔 느리지만 몇 달, 몇 년에 걸쳐 <b>장기 강도</b>를 키운다. <i>늦게 피는 꽃</i></div>
+    <div><b>C₃A</b>가장 성질 급한 막내. 물을 만나자마자 반응하며 열을 낸다. 그대로 두면 순식간에 굳어 버린다. <i>데이터 열: c3a_pct</i></div>
+    <div><b>C₄AF</b>철이 들어간 형제. 강도에는 크게 기여하지 않지만 굽기를 돕고 <b>시멘트의 회색</b>을 만든다.</div>
+  </div>
+  <p>오늘 실습에서 C₃S가 높을수록 강도가 오르는 이유가 이것이다. 그리고 C₃A의 SHAP 기여가 거의 0으로 나오는데(3부), 이것은 "C₃A가 쓸모없다"가 아니라 이 가상 데이터에서 C₃A가 28일 강도를 거의 움직이지 않게 만들어졌기 때문이다.</p><div class="fun">시멘트를 굽지 않고 주성분 가루만 섞어서는 C₃S가 생기지 않는다. 1,450 ℃라는 높은 온도가 있어야만 이 주전 선수가 태어난다. 그래서 '굽기'가 시멘트 공장의 심장이다.</div></aside><figure class="fig"><img src="img/F06_clinker_four_brothers.webp" alt="검회색 클링커 구슬을 반으로 가르니 안에서 성격이 다른 네 꼬마 광물 캐릭터(주전 선수, 느긋한 선수, 성질 급한 막내, 철 담당)가 나오는 장면" onerror="this.parentNode.classList.add('noimg')"><div class="ph">그림 자리 · F06_clinker_four_brothers<br><span>(그림 준비 중 · img/F06_clinker_four_brothers.webp)</span></div><figcaption>그림 F06 — 클링커 4형제: 주전 C₃S, 느긋한 C₂S, 성질 급한 C₃A, 철 담당 C₄AF</figcaption></figure><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑥</span><h4>석고 — 시멘트의 브레이크</h4>
+  <p>막내 C₃A는 물을 만나면 몇 분 만에 굳어 버리려 한다. 레미콘 차가 공사장에 도착하기도 전에 굳으면 큰일이다. 그래서 클링커를 갈 때 <b>석고를 3~5% 정도</b> 함께 넣는다. 석고는 C₃A의 겉을 얇게 감싸 반응 속도를 늦추는 <b>브레이크</b> 역할을 한다.</p>
+  <p>브레이크는 너무 약해도, 너무 세도 문제다. 석고가 모자라면 갑자기 굳고(급결), 너무 많으면 나중에 남은 석고가 반응하며 부피가 늘어 금이 갈 수 있다. 오늘 가상 데이터가 <b>석고 4.5% 근처에서 강도가 가장 좋게</b> 만들어진 것도 이 "적당히"를 흉내 낸 것이다. 3부의 파생 변수 <code>gypsum_dev</code>(4.5%에서 얼마나 멀어졌나)가 여기서 나온다.</p><div class="fun">석고는 깁스, 두부 응고제, 분필에도 쓰이는 친숙한 광물이다. 같은 광물이 병원에서는 뼈를 붙잡고, 시멘트 공장에서는 굳는 속도를 붙잡는다.</div></aside><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑦</span><h4>물을 만나면 — 시멘트는 '마르는' 게 아니라 '자란다'</h4>
+  <p>시멘트에 물을 부으면 클링커 광물이 물과 반응하는 <b>수화 반응</b>이 시작된다. 이때 <b>바늘 같은 아주 작은 결정</b>(칼슘·규소·물이 엮인 겔)이 시멘트 알갱이 표면에서 자라나 이웃 알갱이의 결정과 엉킨다. 수많은 바늘이 서로 손깍지를 끼듯 얽히면서 가루가 돌이 된다.</p>
+  <ul>
+    <li><b>마르는 것이 아니다</b> — 그래서 시멘트는 <b>물속에서도 굳는다</b>. 다리 기둥을 강물 속에 세울 수 있는 이유다.</li>
+    <li><b>열이 난다</b> — 반응할 때 열(수화열)이 나서, 큰 댐을 지을 때는 오히려 열을 식히는 것이 숙제다.</li>
+    <li><b>시간이 걸린다</b> — 결정은 며칠, 몇 주에 걸쳐 계속 자란다. 그래서 강도도 날마다 조금씩 오른다.</li>
+  </ul><div class="fun">갓 부은 콘크리트에 일부러 물을 뿌리고 비닐을 덮어 두는 것(양생)은 "마르지 말고 물을 계속 먹으며 자라라"는 뜻이다. 빨리 말리면 오히려 약해진다.</div></aside><figure class="fig"><img src="img/F03_hydration_needles.webp" alt="시멘트 알갱이 표면에서 자란 바늘 모양 결정들이 이웃 알갱이의 결정과 손깍지 끼듯 얽히는 모습을 돋보기로 들여다보는 초파리 연구원" onerror="this.parentNode.classList.add('noimg')"><div class="ph">그림 자리 · F03_hydration_needles<br><span>(그림 준비 중 · img/F03_hydration_needles.webp)</span></div><figcaption>그림 F03 — 수화 반응: 바늘 결정이 얽히면서 가루가 돌이 된다</figcaption></figure><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑧</span><h4>28일 강도와 MPa — 시멘트의 성적표 읽기</h4>
+  <p>시멘트의 품질은 <b>얼마나 센 힘을 견디는지</b>로 매긴다. 시멘트·표준 모래·물을 정해진 비율로 섞어 작은 막대(시편)를 만들고, 물속에서 정해진 날짜만큼 키운 뒤, 기계로 꾹 눌러 부서지는 순간의 힘을 잰다. 우리나라 표준 시험법(KS L ISO 679)은 시멘트 1 : 모래 3 : 물 0.5 비율의 몰탈을 쓴다.</p>
+  <ul>
+    <li><b>왜 28일일까?</b> 앞에서 본 것처럼 결정은 계속 자라지만, 4주쯤 지나면 쓸 만한 강도의 대부분이 나온다. 그래서 세계적으로 28일 강도를 대표 성적표로 약속해 쓴다. 3일·7일 강도는 중간 성적표다.</li>
+    <li><b>MPa(메가파스칼)은 얼마나 센 걸까?</b> 1 MPa은 손톱만 한 넓이(1 cm²)에 약 10 kg을 올려놓은 압력이다. 오늘 규격선인 <b>42.5 MPa</b>은 1 cm²에 약 430 kg, 엄지손톱 위에 성인 여섯 명이 올라선 것과 비슷한 무게를 견딘다는 뜻이다.</li>
+    <li><b>7일 강도와 28일 강도</b> — C₃S가 일찍 일하기 때문에 7일이면 28일 강도의 상당 부분이 이미 나온다. 오늘 가상 데이터에서는 7일 강도가 28일 강도의 약 0.68배다. 이 끈끈한 관계 때문에 2부에서 "7일 강도를 입력에 넣는 반칙(누수)"이 생긴다.</li>
+  </ul><div class="fun">28일을 기다린다는 것은, 오늘 만든 시멘트가 이미 트럭에 실려 건물이 되어 가는 동안에야 성적표가 나온다는 뜻이다. 이 기다림이 오늘 AI가 풀려는 바로 그 문제다.</div></aside><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑨</span><h4>분말도 — 같은 1 g이라도 얼마나 곱게 갈았나</h4>
+  <p>각설탕과 설탕 가루를 커피에 넣으면 가루가 훨씬 빨리 녹는다. 물과 닿는 <b>겉넓이</b>가 넓기 때문이다. 시멘트도 같다. 곱게 갈수록 물과 닿는 면이 넓어져 반응이 빠르고 강도가 잘 나온다.</p>
+  <p>이 곱기를 재는 숫자가 <b>분말도(블레인, cm²/g)</b>다. "시멘트 1 g에 들어 있는 모든 알갱이의 겉넓이를 펼쳐 더하면 몇 cm²인가"라는 뜻이다. 오늘 데이터의 <code>blaine</code>은 3,000 ~ 4,500 cm²/g 사이다.</p>
+  <p>단, 더 곱게 갈려면 분쇄기를 더 오래 돌려야 해서 <b>전기요금</b>이 오른다. 그리고 어느 정도를 넘으면 강도 이득은 줄어든다. 4부의 원가 계산에서 분말도가 "강도 손잡이이자 비용 항목"으로 다시 나온다.</p><div class="fun">분말도 3,500 cm²/g이면 시멘트 1 kg의 알갱이 겉넓이를 모두 펼쳤을 때 약 350 m², 농구 코트 하나에 가까운 넓이다. 한 포대(40 kg)라면 축구장 두 개쯤 된다.</div></aside><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑩</span><h4>슬래그 — 제철소에서 온 친환경 재료</h4>
+  <p>제철소의 용광로에서 쇳물을 뽑고 나면 위에 뜬 찌꺼기가 남는다. 이것을 물로 급히 식혀 모래처럼 만든 것이 <b>고로 슬래그</b>다. 곱게 갈아 시멘트에 섞으면, 시멘트가 수화하며 만든 성분의 도움을 받아 천천히 굳는 성질(잠재 수경성)을 보인다.</p>
+  <ul>
+    <li><b>장점</b> — 클링커를 덜 구워도 되니 <b>값이 싸고 이산화탄소가 줄어든다</b>. 바닷물에도 강하고 열도 덜 난다.</li>
+    <li><b>단점</b> — 처음에는 강도가 <b>느리게</b> 오른다. 그래서 28일 강도만 보면 슬래그가 많을수록 낮게 나오기 쉽다.</li>
+  </ul>
+  <p>오늘 데이터의 <code>slag_pct</code>(0~30%)가 강도를 내리는 쪽으로 크게 작용하는 이유가 이것이고, 4부에서 "값이 싸니까 슬래그를 많이 넣자"는 유혹과 "강도는 지켜야 한다"는 제약이 줄다리기를 하는 이유도 이것이다.</p><div class="fun">슬래그를 섞은 시멘트는 처음엔 느리지만 몇 달, 몇 년이 지나면 보통 시멘트를 따라잡거나 넘어서기도 한다. 토끼와 거북이 경주의 거북이다.</div></aside><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑪</span><h4>유리석회 — 덜 익은 밥알</h4>
+  <p>가마에서 석회(CaO)가 짝을 다 찾지 못하고 홀로 남으면 <b>유리석회(free lime)</b>가 된다. 밥을 지을 때 덜 익은 쌀알이 남은 것과 비슷하다. 원인은 주로 <b>덜 구웠거나</b>(온도가 낮거나), <b>석회석을 너무 많이 넣었거나</b>, 원료를 고르게 섞지 못한 경우다.</p>
+  <p>유리석회는 나중에 물과 천천히 반응하면서 <b>부피가 늘어나</b> 굳은 시멘트에 금이 가게 할 수 있다. 그래서 공장은 유리석회를 매일 잰다. 오늘 데이터의 <code>free_lime_pct</code>가 높을수록 강도가 낮고 불량이 늘도록 만들어진 이유다.</p>
+  <p>하나 기억할 점: 유리석회는 우리가 직접 돌리는 <b>손잡이가 아니라 굽기 상태를 보여 주는 계기판</b>이다. 이 구분이 3부의 "중요도 ≠ 인과"에서 결정적으로 쓰인다.</p><div class="fun">공장 사람들은 유리석회 값을 보고 "오늘 가마 컨디션"을 읽는다. 체온계가 감기의 원인이 아니라 증상을 보여 주듯, 유리석회도 굽기의 결과를 보여 준다.</div></aside>
+  <h3>정리 — 데이터의 열 이름을 시멘트 말로 번역하기</h3>
+  <div class="tw"><table class="tb"><thead><tr><th>열 이름</th><th>시멘트 말로</th><th>공장의 어느 정거장</th><th>28일 강도에 대한 기대</th></tr></thead><tbody>
+    <tr><td><code>limestone_pct</code></td><td>반죽에 넣은 석회석 비율</td><td>① 원료 준비</td><td>C₃S를 늘려 간접적으로 ↑</td></tr>
+    <tr><td><code>kiln_temp</code></td><td>가마 온도</td><td>② 굽기</td><td>잘 구우면 ↑ (연료비도 ↑)</td></tr>
+    <tr><td><code>c3s_pct</code></td><td>주전 선수 알라이트의 양</td><td>② 굽기의 결과</td><td>많을수록 ↑</td></tr>
+    <tr><td><code>c3a_pct</code></td><td>성질 급한 막내의 양</td><td>② 굽기의 결과</td><td>이 데이터에선 거의 무관</td></tr>
+    <tr><td><code>free_lime_pct</code></td><td>덜 익은 석회</td><td>② 굽기의 결과(계기판)</td><td>많을수록 ↓, 불량 ↑</td></tr>
+    <tr><td><code>gypsum_pct</code></td><td>브레이크 석고</td><td>③ 갈기</td><td>4.5% 근처가 최고</td></tr>
+    <tr><td><code>blaine</code></td><td>얼마나 곱게 갈았나</td><td>③ 갈기</td><td>고울수록 ↑ (전기료 ↑)</td></tr>
+    <tr><td><code>slag_pct</code></td><td>섞은 슬래그 비율</td><td>③ 갈기</td><td>많을수록 28일엔 ↓ (값은 ↓)</td></tr>
+    <tr><td><code>strength_7d</code> · <code>strength_28d</code></td><td>중간·최종 성적표</td><td>④ 시험</td><td>— (맞히고 싶은 값)</td></tr>
+  </tbody></table></div>
+<div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 견학을 마치고</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>와, 이제 표의 열 이름이 다 읽혀요! <code>blaine</code>은 '얼마나 곱게 갈았나', <code>free_lime</code>은 '덜 익은 밥알'이요.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="arms" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>하나 걸리는 게 있어. 유리석회는 '계기판'이라며. 그럼 AI가 유리석회를 중요하다고 해도, 유리석회를 '직접 낮추라'는 말은 안 되는 거지?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="judge" alt="" aria-hidden="true"><div><b class="name">박사</b><p>정확해요. 그 질문을 3부까지 잘 들고 가세요. 시멘트 지식이 있어야 AI의 답을 <b>걸러 낼</b> 수 있어요. 오늘 강의의 진짜 목표가 그거예요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>슬래그가 싸다는 건 접수했어. 4부에서 만나자고.</p></div></div>
+</div><details class="chk"><summary>🙋 스스로 확인 — 석고를 하나도 넣지 않으면 어떤 일이 생길까?</summary><p>성질 급한 C₃A가 물을 만나자마자 반응해 시멘트가 몇 분 만에 굳어 버릴 수 있다(급결). 석고는 굳는 속도를 늦추는 브레이크다. 반대로 너무 많아도 나중에 부피가 늘어 금이 갈 수 있어서 '적당히(이 데이터에선 4.5% 근처)'가 중요하다.</p></details><details class="chk"><summary>🙋 스스로 확인 — 슬래그를 많이 넣으면 28일 강도가 낮게 나오기 쉬운데, 그래도 공장이 슬래그를 쓰는 이유는?</summary><p>값이 싸고, 클링커를 덜 써서 이산화탄소를 줄이며, 장기 강도와 바닷물 저항성이 좋기 때문이다. 다만 28일 강도는 느리게 오르므로 '얼마나 넣을지'가 원가와 강도의 줄다리기가 된다(4부).</p></details>
+  <p class="small">이 칸의 "여기서 잠깐"은 삼표그룹 블로그 「건축재료학개론 – 시멘트편」(2022)이 다루는 주제(시멘트의 정의, 역사, 원료, 제조, 광물, 수화, 종류)를 따라 시멘트 교과서의 일반 지식으로 풀어 쓴 것이다. 숫자는 대표적인 범위이며 공장과 규격판마다 다를 수 있다.</p>
+</div>
+</section>
+
+<!-- ===================== 0-2 AI 첫걸음 ===================== -->
+<section class="level" id="ai101">
+<div class="wrap">
+  <div class="lvhead">
+    <div class="hexno">0-2<small>준비</small></div>
+    <h2>AI 모델 첫걸음 — '예측 모델'이 대체 뭘까 <span class="easy-badge">처음 읽는 사람용</span></h2>
+  </div>
+  <p class="sub">AI 모델을 처음 보는 사람을 위한 칸이다. 수식 없이, 모델이 무엇을 받아서 무엇을 내놓는지, 어떻게 "배우는지"만 잡고 간다.</p>
+<div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 조수(하루)의 두 번째 고백</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="firm" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>박사님… 사실 'AI 모델'도 잘 몰라요. 챗봇은 써 봤는데, 시멘트 강도를 맞히는 AI는 챗봇이랑 같은 거예요?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>사촌쯤 돼요. 오늘 쓰는 건 <b>표(숫자 데이터)를 보고 숫자 하나를 맞히는 모델</b>이에요. 이렇게 생각해요. 모델은 <b>입구와 출구가 있는 상자</b>예요. 입구에 '분말도 3,800, 슬래그 15%, 온도 1,450 ℃ …'를 넣으면 출구에서 '28일 강도 47.3 MPa'가 나와요.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>상자 안의 규칙은 누가 만드는데? 사람이 '분말도가 100 오르면 강도 0.6 오른다' 이렇게 적어 넣어?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>그게 옛날 방식(규칙 기반)이에요. 머신러닝은 반대로, <b>과거 로트 3,000개의 입력과 실제 결과</b>를 보여 주면 상자가 규칙을 스스로 찾아요. 이걸 <b>학습</b>이라고 해요. 기출문제를 잔뜩 풀면서 감을 익히는 수험생처럼요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>그럼 기출문제 많이 푼 놈이 이기는 게임이네. 데이터는 많을수록 좋다, 접수.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="arms" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>많기만 하면 돼? 답지를 보고 푼 기출이면 소용없잖아. 그 얘긴 2부에서 내가 할게.</p></div></div>
+</div><figure class="fig"><img src="img/F04_model_box.webp" alt="왼쪽 입구로 숫자 카드(분말도, 슬래그, 온도)가 들어가고 오른쪽 출구로 강도 막대가 나오는 커다란 상자를 조수가 신기하게 들여다보는 그림" onerror="this.parentNode.classList.add('noimg')"><div class="ph">그림 자리 · F04_model_box<br><span>(그림 준비 중 · img/F04_model_box.webp)</span></div><figcaption>그림 F04 — 모델은 입구(입력 X)와 출구(출력 y)가 있는 상자</figcaption></figure><aside class="zam ai" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · AI 이야기 ①</span><h4>데이터 표 읽는 법 — 한 줄은 시멘트 한 묶음</h4>
+  <p>오늘 데이터는 엑셀 표처럼 생겼다. <b>가로 한 줄(행)</b>은 시멘트 한 묶음, 곧 <b>로트</b> 하나다. 같은 조건으로 연달아 만든 한 덩어리의 생산분이라고 생각하면 된다. <b>세로 한 칸(열)</b>은 그 로트에 대해 잰 값 하나다.</p>
+  <div class="tw"><table class="tb"><thead><tr><th>lot_id</th><th>kiln_temp</th><th>blaine</th><th>slag_pct</th><th>…</th><th>strength_28d</th></tr></thead><tbody>
+    <tr><td>K1-0000</td><td>1,452</td><td>3,820</td><td>15</td><td>…</td><td>48.6</td></tr>
+    <tr><td>K1-0001</td><td>1,438</td><td>3,150</td><td>25</td><td>…</td><td>43.9</td></tr>
+  </tbody></table></div>
+  <p class="small">위 두 줄은 읽는 법을 보여 주려고 만든 예시 행이다.</p>
+  <p>그러니 "3,000행 × 14열"은 "로트 3,000개에 대해 각각 14가지를 기록했다"는 말이다. 이 중 8개 열이 <b>입력 X</b>(생산하면서 이미 아는 값), 1개 열이 <b>출력 y</b>(맞히고 싶은 28일 강도)가 된다.</p></aside><aside class="zam ai" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · AI 이야기 ②</span><h4>회귀와 분류 — 숫자를 맞히나, 칸을 고르나</h4>
+  <div class="pair" style="margin:6px 0">
+    <div><div class="tag fly">회귀</div><p>답이 <b>숫자</b>다. "이 로트의 28일 강도는 몇 MPa?" 키, 몸무게, 내일 기온 맞히기와 같은 종류다. 얼마나 <b>가깝게</b> 맞혔는지로 채점한다.</p></div>
+    <div><div class="tag nn">분류</div><p>답이 <b>칸(범주)</b>이다. "이 로트는 불량인가, 양품인가?" 스팸 메일 거르기, 합격·불합격과 같은 종류다. 몇 번 <b>맞는 칸</b>을 골랐는지로 채점한다.</p></div>
+  </div>
+  <p>같은 표로 둘 다 할 수 있다. 질문이 바뀌면 모델과 채점 방법이 바뀐다. 1·3·4부는 회귀, 2부 뒷부분은 분류다.</p></aside><aside class="zam ai" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · AI 이야기 ③</span><h4>결정 나무 — AI판 스무고개</h4>
+  <p>오늘 쓰는 모델의 기본 부품은 <b>결정 나무</b>다. 스무고개와 똑같다. 질문을 하나씩 던져 로트들을 갈래로 나누고, 마지막 갈래에 모인 로트들의 평균 강도를 답으로 낸다.</p>
+  <ol>
+    <li>"분말도가 3,700보다 큰가?" → 예 / 아니오로 나눈다.</li>
+    <li>예 쪽에서 다시 "슬래그가 15%보다 많은가?" → 또 나눈다.</li>
+    <li>더 나누지 않는 마지막 칸(잎)에 모인 로트들의 평균이 예측값이다. 예: "분말도 큼 · 슬래그 적음" 칸의 평균 51 MPa.</li>
+  </ol>
+  <p>어떤 질문을 어떤 순서로 할지는 사람이 정하지 않는다. 나무가 데이터를 보고 <b>"이 질문으로 나누면 갈래 안의 강도가 가장 비슷해진다"</b>는 질문을 스스로 고른다. 나무의 <b>깊이</b>는 질문을 몇 번 연달아 하느냐다. 2부에서 깊이가 너무 깊으면 무슨 일이 생기는지 직접 본다.</p></aside><figure class="fig"><img src="img/F05_twenty_questions_tree.webp" alt="초파리 연구원이 '분말도가 큰가?' 팻말 앞에서 갈림길을 고르고, 갈림길이 다시 두 갈래로 나뉘어 끝에 강도 막대가 놓인 나무 모양 길" onerror="this.parentNode.classList.add('noimg')"><div class="ph">그림 자리 · F05_twenty_questions_tree<br><span>(그림 준비 중 · img/F05_twenty_questions_tree.webp)</span></div><figcaption>그림 F05 — 결정 나무는 스무고개: 질문으로 갈래를 나누고 끝 칸의 평균을 답한다</figcaption></figure><aside class="zam ai" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · AI 이야기 ④</span><h4>부스팅 — 빈대떡 간을 맞추듯 조금씩 고치기</h4>
+  <p>나무 한 그루는 대충 맞힌다. 그래서 <b>부스팅</b>은 작은 나무를 여러 그루 <b>차례로</b> 심는다. 빈대떡 반죽 간 맞추기와 같다.</p>
+  <ol>
+    <li>먼저 반죽 맛을 본다. "좀 싱겁네." → 첫 나무의 예측과 실제의 차이(<b>잔차</b>)를 잰다.</li>
+    <li>소금을 <b>조금만</b> 넣는다. → 둘째 나무는 "얼마나 싱거웠나(잔차)"만 맞히도록 배우고, 그 답을 조금만 더한다.</li>
+    <li>다시 맛보고 또 조금 넣는다. → 셋째, 넷째 나무가 남은 차이를 또 줄인다. 기본 설정은 100번.</li>
+  </ol>
+  <p>"한 번에 얼마나 넣을지"가 <b>학습률</b>이다. 소금을 한꺼번에 왕창 넣으면 짜게 지나치듯, 학습률이 크면 우연한 잡음까지 따라가 버린다. 1부의 장난감 실험에서 학습률 0.1, 0.3, 1.0을 직접 바꿔 본다.</p><div class="fun">오늘 쓰는 <code>GradientBoostingRegressor</code>라는 긴 이름은 '잔차를 조금씩(그래디언트) 고쳐 나가는(부스팅) 숫자 맞히기 모델(회귀)'이라는 뜻이다.</div></aside><figure class="fig"><img src="img/F07_pancake_boosting.webp" alt="조수가 빈대떡 반죽을 맛보며 소금을 숟가락으로 조금씩 넣고, 옆에서 박사가 작은 나무 화분을 한 그루씩 줄지어 놓는 장면" onerror="this.parentNode.classList.add('noimg')"><div class="ph">그림 자리 · F07_pancake_boosting<br><span>(그림 준비 중 · img/F07_pancake_boosting.webp)</span></div><figcaption>그림 F07 — 부스팅은 빈대떡 간 맞추기: 맛보고, 조금 넣고, 다시 맛본다</figcaption></figure><aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>평균과 표준편차 — '보통'과 '들쭉날쭉한 정도'</h4></div></div><p>데이터 설명에 "28일 강도 평균 48.0 MPa, 표준편차 4.7 MPa"라고 나와요. 저는 표준편차라는 말만 들으면 머리가 하얘졌는데, 이렇게 생각하니까 쉬웠어요.</p><ol class="beats"><li>로트 3,000개의 강도를 다 더해서 3,000으로 나누면 <b>평균 48.0</b>. 우리 공장 시멘트의 '보통 실력'이에요.</li><li>그런데 모든 로트가 48.0은 아니죠. 어떤 건 52, 어떤 건 43. 각 로트가 평균에서 <b>얼마나 떨어져 있나</b>를 재요.</li><li>떨어진 거리를 그냥 더하면 위아래가 서로 상쇄돼서 0이 돼 버려요. 그래서 <b>제곱해서 모두 양수로</b> 만든 뒤 평균 내고, 마지막에 <b>제곱근으로 단위를 MPa로 되돌려요</b>.</li><li>그렇게 나온 <b>4.7 MPa</b>가 표준편차예요. "로트들은 보통 평균에서 ±4.7 MPa 정도 들쭉날쭉하다"는 뜻이에요.</li></ol><p>그러니까 아무 모델 없이 "다 48이겠지" 하고 찍으면 평균 4.7 MPa쯤 틀려요. 1부의 모델이 2.33 MPa만 틀린다는 건, 찍기보다 <b>들쭉날쭉함을 절반쯤 줄였다</b>는 뜻이에요!</p><p class="formal">교과서 식으로 쓰면 → 표준편차 σ = √( Σ(yᵢ − ȳ)² / n )</p></aside><div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 준비 끝</p>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>자, 이제 무기는 다 챙겼어요. <b>로트·입력·출력·회귀·분류·나무·부스팅</b>. 이 일곱 단어면 오늘 페이지 전체를 읽을 수 있어요.</p></div></div>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>모르는 수식이 나오면 제가 이야기로 풀어 볼게요. 분홍 상자가 보이면 '조수의 수식 이야기'예요!</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="magnify" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>주황 점선 상자 '여기서 잠깐'은 시멘트 이야기고. 좋아, 시작하자.</p></div></div>
+</div>
 </div>
 </section>
 
@@ -430,7 +624,14 @@ plt.show()</pre>
     <div><div class="tag nn">모델에서는</div><p>모델은 과거 로트에서 <b>입력 X → 출력 y</b> 관계를 스스로 배운다. 부스팅은 작은 나무를 하나씩 더하는데, 새 나무는 앞 나무들이 틀린 만큼, 곧 잔차를 맞히도록 학습한다. 최종 예측은 모든 나무의 예측을 조금씩 더한 값이다.</p></div>
   </div>
 
-  <section class="panel" aria-label="부스팅 장난감 실험">
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 1부를 시작하며 — 무엇을 맞히려는가</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>1부 목표는 하나예요. 생산하는 날 이미 아는 숫자 8개로 <b>28일 뒤 강도</b>를 오늘 맞히기!</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>8개가 뭔데? 아까 표에서 14열이었잖아.</p></div></div>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>로트 번호·가마 번호·날짜는 원인이 아니라서 빼고, 7일·28일 강도와 불량 여부는 나중에야 아는 '결과'라서 빼요. 남는 게 석회석, 가마 온도, C₃S, C₃A, 유리석회, 석고, 분말도, 슬래그 — 딱 8개예요.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>그게 이 칸 전체에서 제일 중요한 질문이에요. <b>"예측하는 그 순간, 이 값을 정말 알고 있나?"</b> 시멘트 공장 시간표로 생각하면 쉬워요. 굽고 가는 동안 잰 값은 알고, 시험실에서 7일 뒤에 나오는 값은 몰라요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>그럼 바로 나무 심자. 빈대떡 간 맞추기라며?</p></div></div>
+</div>
+<section class="panel" aria-label="부스팅 장난감 실험">
     <p class="ctitle">작은 나무를 하나씩 더해 보기 — 분말도 하나로 강도 맞히기</p>
     <div class="cwrap"><canvas id="cB" aria-label="분말도와 강도 점, 나무를 더할 때마다 계단처럼 바뀌는 예측선, 잔차 막대"></canvas></div>
     <div class="ctrl">
@@ -451,7 +652,8 @@ plt.show()</pre>
     <li>학습률은 새 나무의 말을 얼마나 믿을지다. 1.0이면 한 번에 다 고치려다 잡음까지 외우고, 0.1이면 느리지만 차분하다.</li>
   </ol><p class="lim">비유의 한계: 보고서는 사람마다 다른 시각으로 고치지만, 부스팅의 나무는 모두 같은 방식으로 "남은 오차"만 본다.</p></div>
 
-  <h3>실제 데이터로 — 입력 8개, 학습 80% · 시험 20%</h3>
+  <aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>잔차와 학습률 — 아래 장난감 실험을 읽는 법</h4></div></div><p>위 실험 화면에 막대(잔차)와 계단선(예측)이 나와요. 저도 처음엔 뭐가 뭔지 몰랐는데, 순서대로 보면 이래요.</p><ol class="beats"><li>버튼을 누르기 전, 예측선은 <b>평평한 직선</b>이에요. 모든 로트를 "평균만큼"이라고 찍은 거예요.</li><li>점(실제 강도)과 선 사이의 세로 막대가 <b>잔차</b> = 실제 − 예측. 막대가 위로 길면 "실제가 더 셌는데 덜 셀 거라 했다"는 뜻.</li><li>'나무 1그루 더하기'를 누르면, 새 나무는 점이 아니라 <b>막대(잔차)</b>를 맞히려고 해요. 그리고 그 답에 학습률(0.1)을 곱한 만큼만 예측선에 더해요.</li><li>10그루, 50그루를 쌓으면 계단이 점점 점들에 가까워지고 막대가 짧아져요. 학습률을 1.0으로 바꾸면 계단이 한 번에 확 꺾여서 점 하나하나의 잡음까지 따라가요.</li></ol><p>한 줄로: <b>새 예측 = 지금 예측 + 학습률 × (남은 차이를 맞힌 새 나무의 답)</b>. 빈대떡에 소금을 '조금씩' 넣는 그 습관이에요.</p><p class="formal">교과서 식으로 쓰면 → F_m(x) = F_{m−1}(x) + η · h_m(x),  h_m 은 잔차 r = y − F_{m−1}(x) 를 맞히도록 학습한 나무, η 는 학습률</p></aside>
+<h3>실제 데이터로 — 입력 8개, 학습 80% · 시험 20%</h3>
   <div class="pair">
     <div><div class="tag fly">입력 변수 고르는 질문</div><p><b>"예측하는 그 순간, 이 값을 정말 알고 있나?"</b> 생산 시점에 아는 값만 입력이 된다. 로트 번호·날짜는 원인이 아니고, 7일 강도는 7일 뒤에야 알며, 불량 여부는 결과다.</p></div>
     <div><div class="tag nn">결과</div><p><code>GradientBoostingRegressor(random_state=42)</code>의 시험 점수는 <b class="num">RMSE 2.33 MPa</b>, <b class="num">R² 0.77</b>.</p></div>
@@ -460,12 +662,23 @@ plt.show()</pre>
     <div><div class="tag fly">RMSE — 평균적으로 몇 MPa 틀리나</div><p>오차를 제곱해 평균 내고 제곱근을 씌운 값이다. 단위가 MPa라서 현장 말로 바로 옮길 수 있다. <b>"예측 강도는 대체로 ±2.3 MPa 안팎에서 맞는다."</b> 큰 오차에 벌점을 더 주므로 가끔 크게 틀리는 것에 민감하다.</p></div>
     <div><div class="tag nn">R² — 강도 차이의 몇 %를 설명하나</div><p>0이면 평균값으로 찍은 것과 같고 1이면 완벽하다. 0.77은 로트 간 강도 차이의 약 77%를 입력 8개로 설명한다는 뜻이다. 남은 23%는 측정 오차와 데이터에 없는 요인(원료 로트, 시험자 등)이다.</p></div>
   </div>
-  <div class="tw"><table class="tb"><thead><tr><th>R² 체감 가이드</th><th>읽는 법</th></tr></thead><tbody>
+  <aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>RMSE와 R² — 점수표 두 줄을 이야기로</h4></div></div><p>숫자 두 개가 나왔어요. RMSE 2.33, R² 0.77. 시험 점수처럼 높을수록 좋은 건지 낮을수록 좋은 건지부터 헷갈리죠? 저만 그런 거 아니죠?</p><ol class="beats"><li><b>RMSE는 '평균적으로 몇 MPa 틀렸나'</b>예요. 그러니까 <b>낮을수록 좋아요</b>. 예를 들어 로트 셋이 실제 50, 45, 48인데 모델이 48, 46, 51이라고 했다면 틀린 양은 +2, −1, −3.</li><li>틀린 양을 그냥 더하면 +2와 −3이 서로 깎여서 "별로 안 틀렸네?" 착각하게 돼요. 그래서 <b>제곱</b>해요: 4, 1, 9. 덤으로 크게 틀린 −3에 벌점이 확 커져요.</li><li>평균 내면 14 ÷ 3 ≈ 4.67. 이건 단위가 MPa²라서 이상하니까 <b>제곱근</b>을 씌워 MPa로 돌려놔요: √4.67 ≈ <b>2.16 MPa</b>. 이게 RMSE예요.</li><li><b>R²는 '찍기보다 얼마나 나아졌나'</b>예요. <b>높을수록 좋아요</b>(최대 1). 모델 없이 "다 평균이겠지" 하고 찍었을 때 틀린 양을 100이라 하면, 모델이 틀린 양이 23으로 줄었다는 거예요. 그래서 1 − 23/100 = <b>0.77</b>.</li></ol><p>정리하면 RMSE는 "현장 말로 몇 MPa 오차?"에, R²는 "강도 차이를 몇 % 설명?"에 답해요. 둘을 같이 보고해야 오해가 없어요.</p><p class="formal">교과서 식으로 쓰면 → RMSE = √( Σ(yᵢ − ŷᵢ)² / n ) ,  R² = 1 − Σ(yᵢ − ŷᵢ)² / Σ(yᵢ − ȳ)²</p></aside>
+<div class="tw"><table class="tb"><thead><tr><th>R² 체감 가이드</th><th>읽는 법</th></tr></thead><tbody>
     <tr><td>0.9 이상</td><td>매우 좋다. 그런데 공정 데이터에서 이렇게 높으면 먼저 누수를 의심한다(2부).</td></tr>
     <tr><td>0.7 ~ 0.9</td><td>공정 데이터로는 쓸 만하다.</td></tr>
     <tr><td>0.5 이하</td><td>중요한 변수가 빠졌을 가능성이 있다.</td></tr></tbody></table></div>
 
-  <section class="panel" aria-label="예측 대 실제 산점도와 출하 판정">
+  <aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑫</span><h4>규격선 42.5 MPa — 왜 하필 이 숫자일까</h4>
+  <p>포틀랜드 시멘트는 국가 규격(KS L 5201)에 따라 종류가 나뉜다. 가장 흔한 <b>1종 보통 포틀랜드 시멘트</b>는 28일 압축강도가 일정 기준 이상이어야 한다. 이 강의 자료는 그 하한을 <b>42.5 MPa</b>로 쓴다. 42.5 아래면 "규격 미달"이다.</p>
+  <div class="mini">
+    <div><b>1종 · 보통</b>가장 널리 쓰는 기본형. 오늘의 주인공.</div>
+    <div><b>2종 · 중용열</b>수화열을 줄인 형. 두꺼운 구조물용.</div>
+    <div><b>3종 · 조강</b>일찍 센 형. 급한 공사, 겨울 공사용.</div>
+    <div><b>4종 · 저열</b>열을 더 줄인 형. 댐 같은 거대한 덩어리용.</div>
+    <div><b>5종 · 내황산염</b>바닷물·하수 속 황산염에 강한 형.</div>
+  </div>
+  <p>아래 산점도의 주황 선이 이 42.5다. 문제는 <b>예측이 42.6이라고 해서 실제도 42.5를 넘는다는 보장이 없다</b>는 것이다. 모델은 평균 2.3 MPa쯤 틀리니까. 그래서 판정선을 42.5보다 조금 위에 긋는 "안전 여유"가 필요해진다.</p><div class="fun">같은 회색 가루라도 종류마다 성격이 달라서, 댐에는 열이 덜 나는 시멘트를, 겨울 공사에는 빨리 세지는 시멘트를 고른다. 규격값은 개정될 수 있으므로 실제 적용 전에는 최신 규격을 확인한다.</div></aside>
+<section class="panel" aria-label="예측 대 실제 산점도와 출하 판정">
     <p class="ctitle">행동으로 보기 — 예측으로 출하를 판정하면 어떤 로트가 새어 나가나</p>
     <div class="cwrap"><canvas id="cS" aria-label="시험 로트 600개의 실제 강도와 예측 강도 산점도, 규격선 42.5 MPa와 판정선"></canvas></div>
     <div class="ctrl"><div class="group"><span class="glabel">합격 판정선 (예측값 기준)</span><input type="range" id="sCut" min="42.5" max="48" step="0.1" value="42.5" aria-label="합격 판정선"><span class="val" id="sCutV">42.5</span><span class="small">MPa</span></div></div>
@@ -475,7 +688,14 @@ plt.show()</pre>
   </section>
   <p>빨간 대각선에 가까울수록 정확하다. 양 끝 값이 가운데로 끌려오는 것은 트리 모델의 특성이다. 숫자(RMSE, R²)만 보지 말고 그래프를 함께 보면 <b>규격선 근처의 위험한 실수</b>가 눈에 보인다. 판정선을 올리는 일이 곧 4부의 "안전 여유"다.</p>
 
-  <details><summary>실습 1-2 · 1-3 · 1-4 프롬프트와 코드</summary>
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 산점도를 함께 읽기</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>산점도에서 점 하나가 시험 로트 하나예요. 가로는 실제 강도, 세로는 예측 강도. 빨간 대각선 위에 있으면 딱 맞힌 거예요.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="magnify" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>그럼 제일 무서운 점은 어디에 있는 거야?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="judge" alt="" aria-hidden="true"><div><b class="name">박사</b><p><b>오른쪽 아래 구석이 아니라 왼쪽 위</b>예요. 실제는 42.5 미만인데(왼쪽) 예측은 42.5 이상(위쪽)이라고 한 점. 불합격 시멘트가 합격 도장을 받고 출하되는 경우죠. 판정선 막대를 올려 보면 그 점들이 '보류'로 바뀌는 걸 볼 수 있어요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="sigh" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>판정선을 올리면 멀쩡한 로트도 보류되잖아. 창고비 나가는데…</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>맞아요. 그 줄다리기가 4부의 안전 여유 이야기로 이어져요. 지금은 <b>숫자 둘(RMSE, R²)만 보지 말고 그림을 같이 보자</b>는 것만 기억해요.</p></div></div>
+</div><details class="chk"><summary>🙋 스스로 확인 — RMSE가 2.33에서 1.50으로 바뀌었다면 좋아진 걸까, 나빠진 걸까?</summary><p>좋아진 것이다. RMSE는 평균적으로 틀린 크기(MPa)라서 작을수록 좋다. 반대로 R²는 클수록 좋다. 단, 2부에서 보듯 점수가 좋아진 '이유'가 반칙(누수)이 아닌지 먼저 확인한다.</p></details>
+<details><summary>실습 1-2 · 1-3 · 1-4 프롬프트와 코드</summary>
 <pre class="prompt">X (입력 8 개), y (28 일 강도) 로 학습 80 %, 시험 20 % 로 나누고 sklearn GradientBoostingRegressor 로 학습해 줘. random_state=42. 시험 RMSE 와 R² 를 소수 둘째 자리까지 출력해 줘.</pre>
 <pre class="code">X_cols = ["limestone_pct", "kiln_temp", "c3s_pct", "c3a_pct",
           "free_lime_pct", "gypsum_pct", "blaine", "slag_pct"]
@@ -501,7 +721,7 @@ plt.axvline(42.5, color="orange"); plt.axhline(42.5, color="orange")
 plt.xlabel("Actual (MPa)"); plt.ylabel("Predicted (MPa)")
 plt.show()</pre></details>
 
-  <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수</b><p>RMSE 2.33, R² 0.77이에요. 코드를 다시 돌려도 같은 숫자가 나왔어요.</p></div></div>
+  <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>RMSE 2.33, R² 0.77이에요. 코드를 다시 돌려도 같은 숫자가 나왔어요.</p></div></div>
   <div class="quiz" data-quiz="lv1"></div>
 </div>
 </section>
@@ -518,7 +738,14 @@ plt.show()</pre></details>
     <div><div class="tag fly">현장에서는</div><p>교과서(학습)로 공부하고, 모의고사(검증)로 공부법을 고르고, 수능(시험)은 마지막에 딱 한 번 본다. 시험 문제를 미리 본 학생의 점수는 실력이 아니다.</p></div>
     <div><div class="tag nn">모델에서는</div><p>데이터를 학습 60% · 검증 20% · 시험 20%로 나눈다. <b>고르기는 검증으로, 자랑은 시험으로 한 번만.</b> 시험 데이터로 설정을 고르고 또 시험을 보면 기출문제를 외운 학생이 된다.</p></div>
   </div>
-  <div class="tw"><table class="tb"><thead><tr><th>나무 깊이</th><th class="r">검증 R²</th><th>결정</th></tr></thead><tbody>
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 2부를 시작하며 — 수험생과 시험지</p>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="arms" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>드디어 내 차례. R² 0.77? 좋아, 그런데 <b>누가 채점했는지</b>부터 물어볼게.</p></div></div>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="firm" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>채점은… 모델이 학습할 때 안 본 로트 20%로 했어요. 그럼 된 거 아니에요?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>출발은 맞아요. 수험생으로 비유해 볼게요. <b>교과서(학습 데이터)</b>로 공부하고, <b>모의고사(검증 데이터)</b>로 공부법을 고르고, <b>수능(시험 데이터)</b>은 마지막에 딱 한 번 봐요. 수능 문제를 보고 공부법을 고쳤다면 그 수능 점수는 실력이 아니죠.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>모의고사를 열 번 보고 제일 잘 나온 점수를 보고하면 안 돼?</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>그게 바로 기출 외우기야. 모의고사로 고르는 건 괜찮아. <b>고른 뒤에 수능은 한 번만.</b></p></div></div>
+</div><aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>60 · 20 · 20 — 3,000개를 셋으로 나누는 계산</h4></div></div><p>학습·검증·시험을 60·20·20으로 나눈다는데, 실제로 몇 개씩인지 세어 보면 감이 와요.</p><ol class="beats"><li>전체 로트 3,000개 중 <b>20%</b>인 600개를 먼저 봉투에 넣어 봉인해요. 이게 수능, 시험 데이터.</li><li>남은 2,400개에서 다시 <b>4분의 1</b>(600개)을 떼어 모의고사로 써요. 코드의 <code>test_size=0.25</code>가 이 뜻이에요. 2,400 × 0.25 = 600.</li><li>나머지 1,800개(전체의 60%)로 교과서 공부를 해요.</li><li>나무 깊이를 2, 3, 5로 바꿔 가며 <b>모의고사 점수</b>만 비교해서 깊이 2를 골라요. 그다음에야 봉투를 열어 시험 R² 0.766을 <b>딱 한 번</b> 보고해요.</li></ol><p><code>random_state=42</code>는 '카드를 섞는 손놀림을 고정'하는 거예요. 같은 숫자를 쓰면 누가 돌려도 같은 로트가 같은 칸에 들어가서 결과가 똑같이 재현돼요.</p></aside>
+<div class="tw"><table class="tb"><thead><tr><th>나무 깊이</th><th class="r">검증 R²</th><th>결정</th></tr></thead><tbody>
     <tr class="hl"><td>2</td><td class="r">0.732</td><td>가장 좋음 → 선택</td></tr>
     <tr><td>3</td><td class="r">0.728</td><td></td></tr>
     <tr><td>5</td><td class="r">0.711</td><td></td></tr>
@@ -533,7 +760,15 @@ plt.show()</pre></details>
   </section>
   <p>학습 점수와 시험 점수의 <b>차이</b>를 본다. 둘 다 높은 게 정상이고, 한쪽만 높은 게 경고다. 학습 R² 1.00은 오히려 경고등이다. 과적합의 원인은 너무 깊은 나무, 너무 많은 반복, 너무 적은 데이터다.</p>
 
-  <section class="panel" aria-label="평가 방식 비교">
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 과적합 실험을 보고 나서</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>깊이 8로 하니까 학습 R²가 거의 1.00이에요! 완벽한 거 아니에요?</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="arms" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>시험 R²는? 내려갔지? 그게 <b>과적합</b>이야. 교과서 문제의 답을 토씨 하나까지 외운 학생이 처음 보는 문제에선 헤매는 거.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>스무고개로 말하면, 질문을 너무 많이 해서 마지막 칸에 로트가 한두 개밖에 안 남은 거예요. 그 로트의 우연한 측정 잡음까지 '규칙'이라고 믿게 되죠. <b>학습 점수와 시험 점수의 차이</b>가 크면 경고등이에요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="sigh" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>학습 점수 1.00을 사장님께 보고하려고 했는데… 큰일 날 뻔했네.</p></div></div>
+</div><aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑬</span><h4>7일 강도는 왜 28일 강도와 그렇게 닮았을까</h4>
+  <p>앞에서 본 클링커 4형제를 떠올려 보자. 주전 선수 <b>C₃S가 처음 1~2주 동안 바쁘게 일하기 때문에</b>, 7일 강도에는 이미 그 시멘트의 실력이 상당 부분 드러난다. 성실한 학생의 중간고사 점수가 기말고사 점수와 비슷하게 나오는 것과 같다.</p>
+  <p>그래서 7일 강도를 입력에 넣으면 R²가 0.92까지 치솟는다. 하지만 7일 강도는 <b>시편을 7일 동안 물속에서 키운 뒤에야</b> 알 수 있는 값이다. 우리의 목적은 "출하 전, 생산하는 날 강도를 아는 것"인데, 7일을 기다려야 하는 값을 쓰면 목적 자체가 무너진다. 이것이 <b>데이터 누수</b>다.</p><div class="fun">실제 공장에서 7일 강도로 28일 강도를 미리 짐작하는 것은 오래된 품질 관리 방법이다. 그 자체는 나쁘지 않다. 다만 '생산 당일 예측' 모델의 입력으로 넣으면 반칙이 된다는 것이 핵심이다. 질문이 바뀌면 같은 값도 반칙이 되기도, 정당한 입력이 되기도 한다.</div></aside>
+<section class="panel" aria-label="평가 방식 비교">
     <p class="ctitle">같은 모델, 평가 방식만 바꾸기 — 누수와 그룹 분할</p>
     <div class="ctrl"><div class="group" id="evBtns">
       <button class="bt" data-ev="base" aria-pressed="true">정상 (입력 8개)</button>
@@ -546,7 +781,19 @@ plt.show()</pre></details>
     <div class="insight" id="insT" aria-live="polite"></div>
   </section>
 
-  <div class="explain"><h4>믿을 수 있는 숫자의 조건</h4><ul>
+  <aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑭</span><h4>가마마다 '버릇'이 다른 이유</h4>
+  <p>같은 회사, 같은 레시피라도 가마 K1과 K5가 만든 시멘트는 조금씩 다르다. 실제 공장에서는 다음과 같은 이유로 가마마다 고유한 버릇이 생긴다.</p>
+  <ul>
+    <li><b>원료가 다르다</b> — 가마마다 받는 석회석의 광산 구역이 조금씩 다르다.</li>
+    <li><b>설비 나이가 다르다</b> — 내화벽돌, 버너, 냉각기의 상태가 다르다.</li>
+    <li><b>운전하는 사람과 연료가 다르다</b> — 불꽃 모양과 온도 분포가 달라진다.</li>
+  </ul>
+  <p>오늘 가상 데이터에도 가마마다 −2.5 ~ +2.0 MPa의 고유 편차를 넣어 두었다. 무작위로 나누면 모델은 "K5 로트는 원래 좀 세다"는 버릇을 학습 데이터에서 외우고 시험에서 써먹는다. 그런데 새 가마를 지었을 때 묻고 싶은 질문은 "<b>처음 보는 가마에도 통하나?</b>"다. 그래서 K5·K6를 통째로 떼어 시험하는 <b>그룹 분할</b>을 쓴다.</p><div class="fun">사람도 같은 김치 레시피로 담가도 집집마다 맛이 다르다. 손맛이 다르고, 배추가 다르고, 김치냉장고가 다르기 때문이다. 가마도 저마다 '손맛'이 있다.</div></aside><div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 0.86이 0.68이 되던 순간</p>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="sigh" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>무작위로 나눴을 땐 가마 이름까지 넣으니 0.86이었는데, K5·K6를 통째로 빼니까 0.68이야. 모델이 망가진 거야?</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>아니. 0.86은 '이미 아는 가마의 버릇까지 써서 받은 점수'고, 0.68은 '새 가마에서 받을 진짜 점수'야. 모델은 그대로고 <b>채점 방식이 정직해진</b> 거지.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="judge" alt="" aria-hidden="true"><div><b class="name">박사</b><p>보고할 숫자는 <b>쓰려는 상황과 같은 방식으로 잰 숫자</b>여야 해요. 새 공장에 팔 모델이면 0.68을, 기존 가마에서 쓸 모델이면 다른 방식이 맞을 수 있어요.</p></div></div>
+</div>
+<div class="explain"><h4>믿을 수 있는 숫자의 조건</h4><ul>
     <li><b>데이터 누수</b> — 예측 시점에는 알 수 없는 정보가 입력에 들어간 상태다. 7일 강도는 28일 강도와 거의 같이 움직이지만 7일을 기다려야 안다. 출하 전 예측이라는 목적과 모순이다. 다른 예: 출하 후 클레임 여부, 재시험 결과, 같은 로트의 재분석값.</li>
     <li><b>그룹 분할</b> — 무작위로 나누면 같은 가마의 로트가 학습과 시험에 섞인다. 모델은 "K5 가마는 원래 강도가 높다" 같은 가마 버릇을 외운다. 실제 질문이 "새 가마(또는 새 공장)에도 통할까?"라면, 가마 단위로 통째로 떼어 시험한다.</li>
     <li>보고할 숫자는 <b>쓰려는 상황과 같은 방식</b>으로 잰 것이어야 한다. 낮아진 숫자가 더 쓸모 있는 숫자다.</li>
@@ -554,7 +801,8 @@ plt.show()</pre></details>
 
   <h3>(보너스) 불량 분류 — 정확도 85.8%의 함정</h3>
   <p>같은 입력 8개로 <code>defect</code>(0/1)를 분류한다. 불량률이 14%이므로 <b>아무것도 안 하고 "전부 양품"이라고만 해도 정확도는 85.7%</b>다. 모델의 정확도 85.8%는 그보다 겨우 0.1%p 높다. 불량 판정에서는 놓친 불량의 비용 때문에 재현율을 먼저 본다.</p>
-  <section class="panel" aria-label="임계값 실험">
+  <aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>정확도·정밀도·재현율 — 화재경보기로 이해하기</h4></div></div><p>불량 판정에서 정확도 85.8%가 '함정'이라는 말이 처음엔 이해가 안 됐어요. 화재경보기로 생각하니까 확 와닿았어요. 불량 = 불, 양품 = 평소.</p><ol class="beats"><li>시험 로트 600개 중 불량은 86개, 양품은 514개예요. 경보기가 <b>아무것도 안 하고 영원히 조용하면</b> 514번은 맞아요. 514 ÷ 600 = <b>정확도 85.7%</b>. 불을 하나도 못 잡았는데 점수는 높아요! 이게 함정이에요.</li><li><b>재현율</b> = 진짜 불 중에 몇 개나 울렸나. 임계값 0.5에서는 불 86개 중 18개만 잡았어요. 18 ÷ 86 = <b>0.21</b>. 불 다섯 개 중 넷을 놓친 거예요.</li><li><b>정밀도</b> = 경보가 울렸을 때 진짜 불이었던 비율. 0.5에서 경보 35번 중 18번이 진짜 → 18 ÷ 35 = <b>0.51</b>. 반은 헛경보.</li><li>임계값을 <b>0.2로 낮추면</b> 예민한 경보기가 돼요. 불 51개를 잡아 재현율 0.59로 오르지만, 헛경보도 17번에서 75번으로 늘어요.</li></ol><p>결국 "불 하나 놓치는 게 헛경보 몇 번만큼 아프냐"가 임계값을 정해요. 아래 실험의 '비용 배수' 막대가 바로 그 질문이에요. 불량 시멘트가 현장에 나가면 클레임·재시공으로 돈이 훨씬 많이 들어서, 공장은 대개 재현율 쪽을 더 챙겨요.</p><p class="formal">교과서 식으로 쓰면 → 정밀도 = TP / (TP + FP) ,  재현율 = TP / (TP + FN) ,  TP 잡은 불량 · FP 오경보 · FN 놓친 불량</p></aside>
+<section class="panel" aria-label="임계값 실험">
     <p class="ctitle">임계값을 바꾸면 무엇이 달라지나 — 시험 로트 600개</p>
     <div class="cwrap"><canvas id="cC" class="wide" aria-label="시험 로트 600개를 점으로 놓고, 임계값에 따라 잡은 불량, 놓친 불량, 오경보, 정상 양품으로 색칠한 그림"></canvas></div>
     <div class="ctrl">
@@ -573,7 +821,8 @@ plt.show()</pre></details>
 
   <div class="bridge field"><h4>현장에 옮기면</h4><p>모델을 라인에 넣기 전에 "이 숫자는 어떤 분할로 잰 것인가"를 보고서 첫 줄에 적는다. 새 가마, 새 원료 산지, 새 계절처럼 학습 때 없던 조건이 생기면 그 조건만 떼어 다시 잰다. 불량 판정 임계값은 품질팀과 영업팀이 놓친 불량의 비용(클레임, 재시험)과 오경보의 비용(보류, 추가 시험)을 함께 정한다.</p><p class="lim">이 페이지의 비용 배수는 설명용 예시값이다.</p></div>
 
-  <details><summary>실습 2-1 ~ 2-5 프롬프트와 코드</summary>
+  <details class="chk"><summary>🙋 스스로 확인 — 새 원료 광산에서 석회석을 받기 시작했다. 모델 점수를 어떻게 다시 재야 할까?</summary><p>새 광산 원료로 만든 로트만 따로 떼어 시험하는 '그룹 분할'처럼 잰다. 학습 때 없던 조건(새 가마, 새 원료, 새 계절)은 그 조건만 떼어 다시 재는 것이 정직한 점수다.</p></details>
+<details><summary>실습 2-1 ~ 2-5 프롬프트와 코드</summary>
 <pre class="prompt">X, y 를 학습 60 %, 검증 20 %, 시험 20 % 로 나누는 코드를 만들어 줘 (random_state=42). GradientBoostingRegressor 의 max_depth 를 2, 3, 5 로 바꿔 가며 검증 R² 를 비교하고, 가장 좋은 깊이로 다시 학습한 뒤 시험 R² 를 마지막에 한 번만 출력해 줘.</pre>
 <pre class="code">X_tmp, X_te, y_tmp, y_te = train_test_split(X, y, test_size=0.2, random_state=42)
 X_tr, X_va, y_tr, y_va = train_test_split(X_tmp, y_tmp, test_size=0.25, random_state=42)
@@ -634,7 +883,15 @@ for t in [0.5, 0.3, 0.2]:
     <div><div class="tag nn">모델에서는</div><p>부스팅은 나무 100그루의 합이라 사람이 직접 읽기 어렵다. SHAP은 예측값을 <b>기준값 + 변수별 기여</b>로 나눈다. 기준값은 평균 예측(이 모델에서 48.07 MPa)이고, 모든 기여를 더하면 그 로트의 예측값이 된다. 게임이론의 섀플리 값에서 나왔다.</p></div>
   </div>
 
-  <section class="panel" aria-label="SHAP 중요도와 워터폴">
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 3부를 시작하며 — '왜'를 묻다</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="firm" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>품질팀장님이 오늘 물어보셨어요. "AI가 이 로트 강도 낮다던데, <b>왜</b>?" 저는 "모델이 그렇게 말했어요…"밖에 못 했어요.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>현장은 이유를 모르면 움직이지 않아요. 그래서 예측 하나를 <b>변수별 몫</b>으로 나눠 보여 주는 도구가 필요해요. 그게 <b>SHAP</b>이에요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>몫을 나눈다? 그건 내 전문이지. 팀플 끝나고 점수 나누는 거잖아.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>바로 그거예요. 4명이 팀 과제로 A+를 받았는데 누가 얼마나 기여했는지 공정하게 나누고 싶다. 한 사람이 빠졌을 때 점수가 얼마나 떨어지는지, 그것도 <b>들어오는 순서를 바꿔 가며 모두 따져서</b> 평균 낸 값이 그 사람의 몫이에요. 게임이론의 '섀플리 값'에서 나왔어요.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="magnify" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>순서를 왜 바꿔? 그냥 한 명씩 빼 보면 되잖아.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="judge" alt="" aria-hidden="true"><div><b class="name">박사</b><p>누가 먼저 들어왔느냐에 따라 기여가 달라 보이거든요. 둘이 같은 일을 할 줄 알면, 먼저 들어온 사람이 공을 다 가져가니까요. 모든 순서를 평균 내면 그 불공정이 사라져요.</p></div></div>
+</div><aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>SHAP 워터폴 — 48.07에서 출발하는 계단 내려가기</h4></div></div><p>아래 워터폴 그림이 처음엔 계단 같기만 했어요. 시험 첫 로트로 같이 따라가 봐요.</p><ol class="beats"><li>출발점은 <b>기준값 48.07 MPa</b>. 아무 정보도 없을 때 모델이 내놓는 평균 예측이에요. "우리 공장 시멘트는 보통 이 정도".</li><li>이 로트는 분말도가 <b>3,061</b>로 꽤 거칠게 갈렸어요. 그래서 분말도의 몫은 <b>−4.06 MPa</b>. 계단을 4칸 내려가요.</li><li>슬래그가 <b>25%</b>로 많아요. 초기 강도가 느린 슬래그 탓에 <b>−2.62 MPa</b>. 또 내려가요.</li><li>그런데 유리석회는 <b>0.77%</b>로 낮아요(잘 구워졌다!). 그래서 이번엔 <b>+1.22 MPa</b> 올라가요.</li><li>나머지 변수들의 작은 몫까지 다 더하면, 계단 끝이 <b>정확히 이 로트의 예측값</b>에 도착해요. SHAP은 언제나 '기준값 + 모든 몫 = 예측'이 딱 맞아요.</li></ol><p>그러니까 팀장님께 이렇게 답하면 돼요. "이 로트는 <b>너무 거칠게 갈렸고(−4.1) 슬래그가 많아서(−2.6)</b> 낮게 나왔습니다. 굽기는 오히려 잘 됐습니다(+1.2)." 이게 숫자로 된 '왜'예요!</p><p class="formal">교과서 식으로 쓰면 → ŷ(x) = φ₀ + Σ φᵢ ,  φ₀ = 기준값(평균 예측) , φᵢ = i번째 변수의 섀플리 기여</p></aside>
+<section class="panel" aria-label="SHAP 중요도와 워터폴">
     <p class="ctitle">강도를 가장 크게 흔드는 변수 — 시험 로트 600개의 평균 |기여|</p>
     <div class="cwrap"><canvas id="cI" aria-label="여덟 변수의 평균 절대 SHAP 값 막대, 분말도와 슬래그가 가장 크다"></canvas></div>
     <p class="ctitle" style="margin-top:14px">한 로트를 해부하기 — 워터폴</p>
@@ -655,14 +912,31 @@ for t in [0.5, 0.3, 0.2]:
     <tr><td>8</td><td>석회석 <code>limestone_pct</code></td><td class="r">0.02</td><td>거의 영향 없음 (?)</td></tr></tbody></table></div>
   <p>막대형 그림은 평균 |기여| 크기만 보여 주고 방향은 무시한다. 점형 그림에서 빨강(높은 값)이 오른쪽에 몰려 있으면 "높을수록 강도 ↑"다. 결과는 <b>공정 직관과 대조</b>한다. 직관과 어긋나면 원인을 의심한다.</p>
 
-  <h3>파생 변수 — 공정 지식을 숫자로 바꿔 넣기</h3>
+  <aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑮</span><h4>AI가 고른 1·2·3위, 시멘트 쪽에서 보면 말이 되나</h4>
+  <p>SHAP이 꼽은 상위 변수는 <b>분말도 → 슬래그 → 유리석회</b>다. 0-1칸에서 배운 시멘트 지식과 대조해 보자. 결과를 직관과 맞춰 보는 것이 AI 해석의 첫 습관이다.</p>
+  <ul>
+    <li><b>분말도 1위</b> — 곱게 갈수록 물과 닿는 겉넓이가 커져 수화가 빨라진다. 28일 강도에 크게 작용하는 것이 자연스럽다. ✔</li>
+    <li><b>슬래그 2위, 방향 ↓</b> — 슬래그는 천천히 굳는다. 28일이라는 비교적 이른 시점에는 많을수록 강도가 낮게 잡힌다. ✔</li>
+    <li><b>유리석회 3위, 방향 ↓</b> — 덜 구워졌다는 신호이고, 덜 구워졌다면 C₃S도 덜 자랐을 것이다. ✔ 단, 계기판이다.</li>
+    <li><b>석고는 산 모양</b> — 적당히(4.5%)가 최고다. 브레이크는 너무 약해도 세도 탈. ✔</li>
+    <li><b>석회석 거의 0</b> — 시멘트의 80%가 석회석인데 0이라니? ✘ 직관과 어긋난다 → 이유를 찾아야 한다(아래).</li>
+  </ul><div class="fun">실제 공장 데이터로 이런 분석을 하면, 직관과 어긋나는 변수가 측정 오류나 센서 고장의 단서가 되기도 한다. '이상한 결과'는 버릴 것이 아니라 캐 볼 것이다.</div></aside><aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>석고의 산 모양 — (석고 − 4.5)² 를 이야기로</h4></div></div><p>가상 데이터를 만든 식에 <code>−1.2×(gypsum−4.5)²</code>라는 게 있어요. 제곱이 나오면 일단 겁나는데, 숫자를 넣어 보니 별거 아니었어요.</p><ol class="beats"><li>석고가 딱 <b>4.5%</b>면 (4.5 − 4.5)² = 0. 벌점 <b>0</b>. 산꼭대기예요.</li><li><b>3.5%</b>로 1 모자라면 (−1)² = 1, 1.2 × 1 = 벌점 <b>1.2 MPa</b>. <b>5.5%</b>로 1 넘쳐도 (1)² = 1, 똑같이 1.2. 제곱 덕분에 모자라도 넘쳐도 똑같이 벌을 받아요.</li><li><b>3.0%</b>나 <b>6.0%</b>로 1.5 벗어나면 1.5² = 2.25, 벌점 <b>2.7 MPa</b>. 1에서 1.5로 반 걸음 더 갔을 뿐인데 벌점은 두 배 넘게 커져요. 멀어질수록 가파르게 떨어지는 산비탈이에요.</li><li>파생 변수 <code>gypsum_dev = |석고 − 4.5|</code>는 이 산의 '꼭대기에서 얼마나 떨어졌나'를 모델에게 직접 알려 주는 힌트예요.</li></ol><p>석고는 브레이크라서 '적당히'가 최고라는 시멘트 지식을, 수식은 그냥 <b>꼭대기가 하나인 산</b>으로 표현한 거예요.</p><p class="formal">교과서 식으로 쓰면 → 강도에 대한 석고 효과 = −1.2 · (g − 4.5)² (가상 데이터 생성식의 한 항)</p></aside>
+<h3>파생 변수 — 공정 지식을 숫자로 바꿔 넣기</h3>
   <div class="tw"><table class="tb"><thead><tr><th>파생 변수</th><th>식</th><th>담긴 공정 지식</th></tr></thead><tbody>
     <tr><td><code>gypsum_dev</code></td><td>|석고 − 4.5|</td><td>석고는 적정량에서 멀어질수록 나빠진다</td></tr>
     <tr><td><code>clinker_pct</code></td><td>100 − 슬래그 − 석고</td><td>강도를 내는 실제 클링커 비율</td></tr></tbody></table></div>
   <div class="ctrl"><div class="group"><button class="bt" id="dTog" aria-pressed="false">파생 변수 2개 넣기</button><span id="dOut" class="num" aria-live="polite"></span></div></div>
   <p>트리 모델은 스스로 꽤 잘 찾아내지만, 공정 지식을 직접 넣으면 모델이 더 쉽게 배우고 해석도 명확해진다. 향상폭이 작다는 것도 정직하게 보고한다.</p>
 
-  <h3>중요도 ≠ 인과</h3>
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 중요도와 원인은 왜 다를까</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="firm" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>그럼 SHAP에서 막대가 긴 것부터 바꾸면 되는 거죠? 유리석회 막대가 기니까 유리석회를 낮추라고 보고할게요!</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="arms" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>잠깐! 0-1칸에서 유리석회는 뭐라고 했어?</p></div></div>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>아… '덜 익은 밥알', <b>계기판</b>이요. 체온계 숫자를 직접 내릴 수는 없죠. 감기를 낫게 해야지.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="judge" alt="" aria-hidden="true"><div><b class="name">박사</b><p>그거예요. SHAP은 <b>"모델이 무엇을 보고 판단했나"</b>를 말해 줄 뿐이에요. <b>"무엇을 바꾸면 공정이 바뀌나"</b>는 시멘트를 아는 사람이 판단해요. 유리석회를 낮추려면 가마 온도나 원료 배합이라는 진짜 손잡이를 돌려야 하죠.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="chart" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>석회석 0.02는? 그건 진짜 쓸모없는 거 아냐? 원가에서 빼 버릴까?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>아래 그림을 봐요. 석회석은 C₃S를 늘리고, C₃S가 강도를 올려요. 모델은 강도와 바로 붙어 있는 C₃S에 공을 다 줬을 뿐이에요. <b>막대가 짧다고 원인이 아닌 건 아니에요.</b></p></div></div>
+</div>
+<h3>중요도 ≠ 인과</h3>
   <div class="cwrap"><svg viewBox="0 0 900 250" role="img" aria-label="석회석이 C3S를 높이고 C3S가 강도를 높이는 간접 경로, 소성 온도가 유리석회를 낮추는 경로를 보여 주는 그림" style="display:block;min-width:680px;width:100%">
     <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ee39c"/></marker><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f0604d"/></marker></defs>
     <g font-size="15" fill="#eceaf3">
@@ -684,9 +958,14 @@ for t in [0.5, 0.3, 0.2]:
   </div>
   <p><b>SHAP은 "모델이 무엇을 보고 판단했나"를 말해 줄 뿐이다. "공정이 어떻게 움직이나"는 엔지니어가 판단한다.</b></p>
 
-  <div class="bridge gen"><h4>생성 AI로 치면</h4><p>생성 AI에게 "왜 그렇게 답했어?"라고 물으면 그럴듯한 이유를 말해 준다. 그러나 그 설명이 모델 내부에서 실제로 일어난 계산이라는 보장은 없다. SHAP은 표 데이터 모델에서 예측을 수학적으로 나눈 값이라 더 엄밀하지만, 그래도 인과는 아니다.</p><p class="lim">비유의 한계: SHAP의 분해는 정의상 정확히 더해 맞지만, 생성 AI의 자기 설명은 그런 보장이 없다.</p></div>
+  <aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑯</span><h4>석회석 → C₃S → 강도, '간접 경로' 시멘트 화학</h4>
+  <p>석회석을 더 넣으면 반죽 속 칼슘(CaO)이 늘어나고, 가마 속에서 칼슘이 규소와 더 많이 짝지어 <b>칼슘이 셋 붙은 C₃S</b>가 더 많이 생긴다. C₃S는 강도의 주전 선수다. 그러니 석회석은 강도에 <b>C₃S를 거쳐서</b> 영향을 준다.</p>
+  <p>그런데 데이터에 C₃S 열이 따로 있으면, 모델은 석회석을 볼 필요가 없다. 강도와 더 가까이 붙어 있는 C₃S만 봐도 충분하니까. 그래서 석회석의 SHAP이 0에 가깝다. 이것은 <b>모델 입장의 효율</b>이지 <b>공정의 진실</b>이 아니다.</p>
+  <p>단, 석회석을 너무 많이 넣으면 짝을 못 찾은 칼슘이 <b>유리석회</b>로 남는다. 그래서 공장은 석회석을 "많을수록 좋다"가 아니라 정해진 비율 지표로 관리한다. 이 지표(LSF)는 다음 회차에서 계산기로 직접 만져 본다.</p></aside>
+<div class="bridge gen"><h4>생성 AI로 치면</h4><p>생성 AI에게 "왜 그렇게 답했어?"라고 물으면 그럴듯한 이유를 말해 준다. 그러나 그 설명이 모델 내부에서 실제로 일어난 계산이라는 보장은 없다. SHAP은 표 데이터 모델에서 예측을 수학적으로 나눈 값이라 더 엄밀하지만, 그래도 인과는 아니다.</p><p class="lim">비유의 한계: SHAP의 분해는 정의상 정확히 더해 맞지만, 생성 AI의 자기 설명은 그런 보장이 없다.</p></div>
 
-  <details><summary>실습 3-1 · 3-2 프롬프트와 코드</summary>
+  <details class="chk"><summary>🙋 스스로 확인 — SHAP 막대가 가장 긴 변수를 바꾸면 강도가 가장 많이 바뀔까?</summary><p>꼭 그렇지 않다. SHAP은 모델이 예측할 때 기댄 정도이지 원인의 크기가 아니다. 유리석회처럼 결과(계기판)인 변수도 있고, 석회석처럼 다른 변수(C₃S) 뒤에 숨어 막대가 짧아 보이는 원인도 있다. 바꿔도 되는지는 공정 지식과 시험 생산으로 확인한다.</p></details>
+<details><summary>실습 3-1 · 3-2 프롬프트와 코드</summary>
 <pre class="prompt">1 부에서 학습한 GradientBoostingRegressor model 과 시험 데이터 X_te 로 shap 라이브러리 TreeExplainer 를 사용해 SHAP 값을 구하고 summary_plot (막대형과 점형) 을 그려 줘. Colab 에 shap 설치 명령도 넣어 줘.</pre>
 <pre class="code">!pip install shap -q
 import shap
@@ -720,13 +999,21 @@ df["clinker_pct"] = 100 - df["slag_pct"] - df["gypsum_pct"]</pre>
     <div><div class="tag fly">현장에서는</div><p>3부까지의 질문은 "이 배합이면 강도가 얼마일까?"였다. 4부의 질문은 "목표 강도를 지키면서 가장 싼 배합은?"이다. 실제로 28일을 기다리면 배합 하나 시험하는 데 한 달이 걸린다.</p></div>
     <div><div class="tag nn">모델에서는</div><p>예측 모델을 <b>가상 시험기</b>로 쓴다. 후보 배합 735개를 만들어 모델로 강도를 예측하고, 원가 함수로 값을 매긴 뒤, 제약을 지키는 후보 중 가장 싼 것을 고른다. 비용은 컴퓨터의 전기뿐이다.</p></div>
   </div>
-  <div class="tw"><table class="tb"><thead><tr><th>재료</th><th>뜻</th><th>오늘의 설정</th></tr></thead><tbody>
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 4부를 시작하며 — 드디어 주판봇의 시간</p>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>기다렸다! 강도 맞히기는 끝났지? 이제 <b>제일 싼 배합</b> 찾자. 슬래그가 싸다며. 슬래그 100% 가자!</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="arms" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>슬래그 100%면 28일 강도는? 규격 미달로 전량 반품이야.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>그래서 문제를 세 조각으로 정해요. <b>① 우리가 돌릴 수 있는 손잡이</b>(결정 변수), <b>② 줄이고 싶은 것</b>(목적함수: 톤당 원가), <b>③ 절대 넘으면 안 되는 선</b>(제약 조건: 예측 강도 ≥ 목표). 이 세 가지를 적는 순간, '좋은 답'의 뜻이 정해져요.</p></div></div>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="firm" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>그런데 배합 하나 시험하려면 28일 걸리잖아요. 수백 가지를 언제 다 시험해요?</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>그래서 1부의 모델을 <b>가상 시험기</b>로 써요. 후보 배합을 모델에 넣으면 1초 만에 '예상 28일 강도'가 나와요. 진짜 시험은 마지막에 고른 몇 개만 하면 되죠.</p></div></div>
+</div>
+<div class="tw"><table class="tb"><thead><tr><th>재료</th><th>뜻</th><th>오늘의 설정</th></tr></thead><tbody>
     <tr><td>결정 변수</td><td>우리가 바꿀 수 있는 손잡이</td><td>슬래그 %, 석고 %, 분말도, 소성 온도</td></tr>
     <tr><td>목적함수</td><td>줄이거나 늘릴 값 = "무엇이 좋은 답인가"의 정의</td><td>톤당 원가 최소화</td></tr>
     <tr><td>제약 조건</td><td>반드시 지킬 선</td><td>예측 28일 강도 ≥ 목표 강도</td></tr></tbody></table></div>
   <p>강도를 올리는 손잡이(분말도↑, 온도↑, 슬래그↓)는 대부분 원가도 올린다. 그래서 균형점을 찾아야 한다. 정의가 바뀌면 답도 바뀐다.</p>
 
-  <section class="panel" aria-label="최소 원가 배합 탐색">
+  <aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>목적함수와 제약 — 장보기 영수증으로</h4></div></div><p>최적화라는 말에 겁먹었는데, 마트 장보기랑 똑같았어요.</p><ol class="beats"><li><b>손잡이(결정 변수)</b> = 장바구니에 무엇을 얼마나 담을지. 여기선 슬래그 %, 석고 %, 분말도, 가마 온도 네 개.</li><li><b>목적함수</b> = 계산대 영수증 합계. "이 장바구니면 톤당 얼마?" 우리는 이걸 <b>최소화</b>하고 싶어요.</li><li><b>제약 조건</b> = 꼭 지켜야 할 규칙. "오늘 저녁 4인분은 꼭 되어야 한다." 여기선 "예측 28일 강도 ≥ 목표 강도".</li><li>방법은 정직해요. 가능한 장바구니를 <b>전부 적어 보고</b>(후보 735개), 규칙 못 지키는 건 버리고, 남은 것 중 영수증이 제일 싼 걸 고르는 거예요.</li></ol><p>이 '전부 적어 보기'를 <b>격자 탐색</b>이라고 해요. 후보가 수백 개면 컴퓨터는 눈 깜짝할 새에 끝내요.</p><p class="formal">교과서 식으로 쓰면 → minimize 원가(x)  subject to  f̂(x) ≥ 목표 강도 ,  x = (슬래그, 석고, 분말도, 온도) ∈ 후보 격자</p></aside>
+<section class="panel" aria-label="최소 원가 배합 탐색">
     <p class="ctitle">목표 강도와 단가를 바꾸며 최소 원가 배합 찾기 — 후보 735개</p>
     <div class="ctrl">
       <div class="group"><span class="glabel">목표 강도</span><input type="range" id="oT" min="42.5" max="50" step="0.1" value="42.5" aria-label="목표 강도"><span class="val" id="oTV">42.5</span><span class="small">MPa</span></div>
@@ -748,7 +1035,8 @@ df["clinker_pct"] = 100 - df["slag_pct"] - df["gypsum_pct"]</pre>
     <p>클링커% = 100 − 슬래그 − 석고. 현재 운전(슬래그 15%, 석고 4.5%, 분말도 3,750, 1,450 ℃)의 원가는 <b class="num">67,400원/톤</b>이다. 후보는 슬래그 0~30%(5%씩) × 석고 3.5~5.5%(0.5%씩) × 분말도 3,000~4,500(250씩) × 온도 1,430·1,450·1,470 ℃ = 7×5×7×3 = <b>735개</b>다. 나머지 입력은 전체 데이터의 중앙값으로 두되, 온도를 바꾸면 유리석회도 함께 바꾼다(3부 교훈: 온도만 바꾸고 유리석회를 그대로 두면 현실에 없는 배합을 시험한다).</p>
     <p class="lim">단가와 원가 식은 강의용 가상값이다. 실제 공장의 단가, 전력 계약, 설비 제약은 다르다.</p></div>
 
-  <div class="tw"><table class="tb"><thead><tr><th>목표 강도</th><th>슬래그</th><th>석고</th><th>분말도</th><th>온도</th><th class="r">예측 강도</th><th class="r">원가 (원/t)</th></tr></thead><tbody>
+  <aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>원가 67,400원을 직접 계산해 보기</h4></div></div><p>위 원가 함수 식이 길어 보이지만, 지금 운전 중인 배합(슬래그 15%, 석고 4.5%, 분말도 3,750, 1,450 ℃)을 넣어서 한 줄씩 따라가면 장보기 영수증 같아요.</p><ol class="beats"><li><b>클링커 비율</b> = 100 − 슬래그 15 − 석고 4.5 = <b>80.5%</b>. 나머지가 다 클링커예요.</li><li><b>재료비</b> = (80.5 × 60,000 + 15 × 25,000 + 4.5 × 30,000) ÷ 100 = (4,830,000 + 375,000 + 135,000) ÷ 100 = <b>53,400원</b>. 클링커가 제일 비싸서 재료비의 대부분을 차지해요.</li><li><b>분쇄비</b> = 8,000 + (3,750 − 3,000) × 4 = 8,000 + 3,000 = <b>11,000원</b>. 곱게 갈수록 전기 요금이 붙어요.</li><li><b>연료비</b> = (1,450 − 1,400) × 60 = <b>3,000원</b>. 가마를 뜨겁게 할수록 연료가 들어요.</li><li>합계 53,400 + 11,000 + 3,000 = <b>67,400원/톤</b>. 페이지의 '현재 운전' 숫자와 똑같아요!</li></ol><p>그리고 후보 수 735개는 손잡이별 칸 수를 곱한 거예요. 슬래그 7칸(0, 5, …, 30) × 석고 5칸 × 분말도 7칸 × 온도 3칸 = 7 × 5 × 7 × 3 = <b>735</b>.</p></aside>
+<div class="tw"><table class="tb"><thead><tr><th>목표 강도</th><th>슬래그</th><th>석고</th><th>분말도</th><th>온도</th><th class="r">예측 강도</th><th class="r">원가 (원/t)</th></tr></thead><tbody>
     <tr><td>현재 운전</td><td>15%</td><td>4.5%</td><td>3,750</td><td>1,450 ℃</td><td class="r">—</td><td class="r">67,400</td></tr>
     <tr><td>42.5 MPa</td><td>30%</td><td>5.0%</td><td>3,000</td><td>1,470 ℃</td><td class="r">42.8</td><td class="r">60,200</td></tr>
     <tr class="hl"><td>47.0 MPa</td><td>30%</td><td>5.0%</td><td>4,000</td><td>1,450 ℃</td><td class="r">47.1</td><td class="r">63,000</td></tr></tbody></table></div>
@@ -758,9 +1046,22 @@ df["clinker_pct"] = 100 - df["slag_pct"] - df["gypsum_pct"]</pre>
     <li>그룹 분할 RMSE 2.87을 쓰면 여유는 더 커져야 한다. 단가가 바뀌면(전력비↑, 슬래그 수급↓) 답은 또 바뀐다.</li>
     <li>두 최적 후보 모두 슬래그 30%로 <b>탐색 범위의 끝</b>에 붙어 있다. 42.5 후보는 분말도 3,000, 온도 1,470 ℃까지 끝값이다. 3부 함정 ③과 같은 이유로, 끝값 답은 범위를 넓히라는 신호가 아니라 시험 생산으로 먼저 확인하라는 신호다.</li>
   </ul>
-  <p><b>모델의 답은 시험 생산으로 검증할 후보이지 확정 처방이 아니다.</b></p>
+  <aside class="zam" aria-label="여기서 잠깐"><span class="zt">여기서 잠깐! · 시멘트 이야기 ⑰</span><h4>슬래그 30% 시멘트, 실제로도 있을까?</h4>
+  <p>있다. 슬래그를 많이 섞은 시멘트는 <b>고로 슬래그 시멘트</b>라는 이름으로 따로 규격(KS L 5210)이 있고, 슬래그 비율에 따라 여러 종으로 나뉜다. 대략 30% 안팎까지 섞은 종류부터 절반이 넘게 섞은 종류까지 있다. 바닷가 구조물, 댐, 지하 구조물처럼 열을 줄이고 바닷물에 강해야 하는 곳에서 많이 쓴다.</p>
+  <p>그러니 4부의 최적 후보가 "슬래그 30%"를 고른 것 자체는 엉뚱하지 않다. 다만 조심할 점이 셋 있다.</p>
+  <ul>
+    <li><b>이름표가 바뀔 수 있다</b> — 슬래그를 일정 비율 넘게 섞으면 '1종 보통 포틀랜드 시멘트'가 아니라 다른 종류의 제품이 된다. 고객이 1종을 주문했다면 팔 수 없다.</li>
+    <li><b>탐색 범위의 끝</b> — 후보 범위가 0~30%였는데 답이 30%, 곧 끝에 붙었다. 모델은 30%를 넘는 데이터를 본 적이 없다.</li>
+    <li><b>슬래그는 무한하지 않다</b> — 제철소가 쇠를 만든 만큼만 나온다. 수급이 빠듯해지면 값이 오르고, 그러면 최적 배합도 바뀐다.</li>
+  </ul><div class="fun">같은 회색 가루라도 포대에 적힌 이름이 다르면 쓰임새와 가격이 달라진다. AI가 찾은 '최저 원가'가 우리가 팔려는 '제품 규격' 안에 있는지 확인하는 것은 사람의 몫이다.</div></aside><aside class="story" aria-label="조수의 수식 이야기"><div class="sthead"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><span class="st">조수(하루)의 수식 이야기</span><h4>안전 여유 '2 × RMSE' — 왜 42.5가 아니라 47.2일까</h4></div></div><p>규격이 42.5니까 예측 42.8이면 통과 아니에요? 저도 그렇게 생각했는데, 활쏘기로 생각하니까 생각이 바뀌었어요.</p><ol class="beats"><li>모델의 예측은 과녁 한가운데를 노린 활과 같아요. 평균은 맞아도 화살은 <b>±2.33 MPa(RMSE)</b>쯤 흩어져요.</li><li>예측이 42.8인 로트의 실제 강도는 대략 40.5 ~ 45.1 사이 어딘가예요. 42.5 아래로 떨어질 확률이 <b>절반 가까이</b> 돼요. 예측이 규격선에 바짝 붙을수록 동전 던지기예요.</li><li>그래서 목표를 42.5 + <b>2 × 2.33</b> = <b>47.2</b>로 올려요. 화살이 웬만큼 흩어져도 42.5 위에 떨어지도록 과녁을 위로 옮긴 거예요. 오차가 평균 정도로 흩어진다면 이렇게 하면 미달 확률이 몇 % 수준으로 줄어요.</li><li>2부에서 새 가마에선 RMSE가 2.87이었죠. 그럼 여유도 커져야 해요: 42.5 + 2 × 2.87 ≈ <b>48.2</b>. <b>오차를 정직하게 잴수록 여유가 커진다</b> — 2부와 4부가 여기서 만나요.</li></ol><p>여유를 두면 원가 절감은 7,200원에서 4,400원으로 줄어요. 하지만 반품 한 번, 건물 하자 하나의 값과 비교하면 이건 <b>보험료</b>예요.</p><p class="formal">교과서 식으로 쓰면 → 판정 목표 = 규격 하한 + k × RMSE (이 페이지 버튼은 k = 2)</p></aside>
+<p><b>모델의 답은 시험 생산으로 검증할 후보이지 확정 처방이 아니다.</b></p>
 
-  <details><summary>실습 4-1 ~ 4-3 프롬프트와 코드</summary>
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 4부를 마치며</p>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>7,200원 절감이 4,400원이 됐지만… 1년에 수십만 톤이면 여전히 큰돈이야. 인정.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="magnify" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>그리고 그 4,400원은 아직 <b>모델의 예상</b>일 뿐이야. 시험 생산으로 실제 28일 강도를 재 봐야 진짜 돈이 되지.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="judge" alt="" aria-hidden="true"><div><b class="name">박사</b><p>오늘의 마지막 원칙이에요. <b>모델의 답은 처방이 아니라 시험해 볼 후보다.</b></p></div></div>
+</div><details class="chk"><summary>🙋 스스로 확인 — 클링커 단가가 60,000원에서 80,000원으로 오르면 최적 배합은 어느 쪽으로 움직일까?</summary><p>클링커가 비싸지면 클링커를 덜 쓰는 쪽, 곧 슬래그를 더 넣고 대신 분말도나 온도로 강도를 메우는 쪽으로 움직이기 쉽다. 위 실험에서 '클링커 단가' 막대를 직접 올려 확인해 보자. 단, 슬래그가 이미 범위 끝(30%)이면 더 갈 곳이 없어 다른 손잡이가 움직인다.</p></details>
+<details><summary>실습 4-1 ~ 4-3 프롬프트와 코드</summary>
 <pre class="prompt">시멘트 1 톤 원가를 계산하는 파이썬 함수 cost(slag, gypsum, blaine, temp) 를 만들어 줘. 클링커 비율 = 100 - slag - gypsum. 재료비 = (클링커%×60000 + 슬래그%×25000 + 석고%×30000)/100. 분쇄비 = 8000 + (blaine-3000)×4, 연료비 = (temp-1400)×60, 원가 = 합계. 현재 배합 (15, 4.5, 3750, 1450) 의 원가를 출력해 줘.</pre>
 <pre class="code">def cost(slag, gypsum, blaine, temp):
     clinker = 100 - slag - gypsum
@@ -799,7 +1100,13 @@ display(ok.head(3)[["slag_pct","gypsum_pct","blaine","kiln_temp","pred","cost"]]
 <div class="wrap">
   <h2>대결 — 새 가마의 성적을 누가 정직하게 약속했나</h2>
   <p class="sub">K5·K6 가마의 데이터는 봉인관이 봉투에 넣어 두었다. 두 연구원은 K1~K4 데이터만 보고 "새 가마에서도 R²가 이 정도 나온다"고 약속한다. 봉투를 열어 실제 점수와 비교한다.</p>
-  <div class="duel" id="duelBox">
+  <div class="talk" aria-label="캐릭터 대화"><p class="tt">💬 대결 규칙을 쉽게</p>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>규칙 설명할게요! 봉인관 부엉이가 K5·K6 가마 데이터를 봉투에 넣어 숨겼어요. 두 사람은 K1~K4만 보고 "새 가마에서 R²가 이 정도 나올 거다"라고 <b>약속</b>을 해요.</p></div></div>
+<div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>난 높게 부를 거야. 가마 이름까지 넣고 무작위로 나누면 점수가 높게 나오거든.</p></div></div>
+<div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>난 K1~K4에서 가마 하나씩 통째로 빼고 시험한 점수로 약속할게. 새 가마는 처음 보는 거니까.</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>이기는 기준은 <b>점수가 높은 쪽이 아니라 약속과 실제가 가까운 쪽</b>이에요. 높게 약속하고 못 지키면, 공장에서는 그게 제일 비싼 실수거든요. 여러분도 먼저 누가 이길지 골라 보세요.</p></div></div>
+</div>
+<div class="duel" id="duelBox">
     <div class="vs">
       <div><img data-who="fly" data-mood="point" data-flip="1" alt="" aria-hidden="true" id="dFly"><div style="color:var(--c-fly);font-weight:700">초파리 연구원</div></div>
       <div class="mid">VS</div>
@@ -816,7 +1123,7 @@ display(ok.head(3)[["slag_pct","gypsum_pct","blaine","kiln_temp","pred","cost"]]
     </div>
     <div class="result">
       <div class="bars" id="dBars"></div>
-      <div class="say asst" data-who="asst"><img class="who" data-who="asst" data-mood="firm" alt="" aria-hidden="true" id="dAsst"><div><b class="name">조수</b><p id="dAsstP"></p></div></div>
+      <div class="say asst" data-who="asst"><img class="who" data-who="asst" data-mood="firm" alt="" aria-hidden="true" id="dAsst"><div><b class="name">조수(하루)</b><p id="dAsstP"></p></div></div>
       <div class="say verdict" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true" id="dDoc"><div><b class="name">박사</b><p id="dDocP"></p></div></div>
       <p class="small" id="dGuess"></p>
       <div class="score"><span>점수판 · 초파리 <b id="sF">0</b></span><span>주판봇 <b id="sR">0</b></span></div>
@@ -845,7 +1152,26 @@ display(ok.head(3)[["slag_pct","gypsum_pct","blaine","kiln_temp","pred","cost"]]
     <li>공헌도 나누기(SHAP): 모델 안의 공헌도이지 공정의 원인이 아니다.</li>
     <li>가상 시험기(최적화): 모델이 본 범위 안에서만 시험기 노릇을 한다.</li>
   </ul></div>
-  <div class="quiz" data-quiz="wrap"></div>
+  
+  <h3>오늘 배운 말, 한 장으로</h3>
+  <div class="mini">
+    <div><b>클링커</b>1,450 ℃에서 구운 검회색 구슬. 석고와 함께 갈면 시멘트.</div>
+    <div><b>C₃S</b>강도의 주전 선수 광물. 28일 강도를 책임진다.</div>
+    <div><b>석고</b>굳는 속도의 브레이크. 적당히(4.5% 근처)가 최고.</div>
+    <div><b>분말도</b>얼마나 곱게 갈았나. 고울수록 강도↑, 전기료↑.</div>
+    <div><b>슬래그</b>제철소 부산물. 싸고 친환경, 28일 강도는 느림.</div>
+    <div><b>유리석회</b>덜 익은 밥알. 손잡이가 아니라 계기판.</div>
+    <div><b>28일 강도 · MPa</b>시멘트 성적표. 42.5 MPa ≈ 1 cm²에 430 kg.</div>
+    <div><b>입력 X · 출력 y</b>예측 순간 아는 값 → 알고 싶은 값.</div>
+    <div><b>부스팅</b>빈대떡 간 맞추듯 작은 나무로 잔차를 조금씩 고치기.</div>
+    <div><b>RMSE · R²</b>몇 MPa 틀리나(작을수록 좋음) · 찍기보다 얼마나 나은가(클수록 좋음).</div>
+    <div><b>누수 · 그룹 분할</b>답지 보고 풀기 금지 · 처음 보는 가마로 시험.</div>
+    <div><b>SHAP</b>예측을 변수별 몫으로 나누기. 몫 ≠ 원인.</div>
+    <div><b>목적함수 · 제약</b>영수증 합계를 줄이되 꼭 지킬 선은 지킨다.</div>
+    <div><b>안전 여유</b>화살이 흩어지는 만큼 과녁을 올린다(k × RMSE).</div>
+  </div>
+
+<div class="quiz" data-quiz="wrap"></div>
 </div>
 </section>
 
@@ -856,7 +1182,10 @@ display(ok.head(3)[["slag_pct","gypsum_pct","blaine","kiln_temp","pred","cost"]]
   <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="judge" alt="" aria-hidden="true"><div><b class="name">박사</b><p>AI는 가상 시험기이자 대화 상대예요. 오늘의 세 줄 — 아는 값만 넣는다. 쓸 상황대로 잰다. 답은 후보다.</p></div></div>
   <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="arms" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>낮은 숫자를 약속한 쪽이 이겼어. 정직한 0.68이 화려한 0.86보다 공장에서 오래 가.</p></div></div>
   <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="sigh" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>이번 판은 손절. 그래도 원가 6.5%는 내가 찾은 거다.</p></div></div>
-  <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수</b><p>결정은 여전히 공정을 아는 사람이 해요. 시험 생산 일정부터 잡을게요.</p></div></div>
+  <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>결정은 여전히 공정을 아는 사람이 해요. 시험 생산 일정부터 잡을게요.</p></div></div>
+<div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p>그리고 저 오늘 하나 깨달았어요. 수식은 <b>이야기를 짧게 줄여 쓴 것</b>이더라고요. 표준편차는 '들쭉날쭉한 정도', RMSE는 '평균 몇 MPa 틀렸나', SHAP은 '팀플 점수 나누기'. 다음 시간엔 이 이야기로 원가를 더 깎아 볼게요!</p></div></div>
+<div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>다음 시간에는 오늘 배운 SHAP을 더 깊이 쓰고, 원료 성적표(산화물)를 공장 사람들의 말(LSF, 보그 광물)로 바꿔서 '가장 싼 배합'을 더 정교하게 찾아요.</p></div></div>
+
 </div>
 </section>
 
@@ -891,7 +1220,7 @@ display(ok.head(3)[["slag_pct","gypsum_pct","blaine","kiln_temp","pred","cost"]]
   <div class="ctrl"><div class="group" id="exScope"><span class="glabel">범위</span><button class="bt" data-s="all" aria-pressed="true">전체</button><button class="bt" data-s="concepts" aria-pressed="false">개념·방법만</button><button class="bt" data-s="claims" aria-pressed="false">주장+출처</button><button class="bt" data-s="prereq" aria-pressed="false">선수 관계</button></div></div>
   <div class="filebtns"><button class="bt primary" id="exZip">꾸러미 ZIP</button><span id="exFiles" class="filebtns"></span></div>
   <h3>확인 필요</h3><ul id="exTodo"></ul>
-  <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수</b><p id="exSay"></p></div></div>
+  <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="report" alt="" aria-hidden="true"><div><b class="name">조수(하루)</b><p id="exSay"></p></div></div>
   <p class="small" id="exVer"></p>
 </div>
 </section>
@@ -905,7 +1234,10 @@ display(ok.head(3)[["slag_pct","gypsum_pct","blaine","kiln_temp","pred","cost"]]
     <tr><td>[3]</td><td>그래디언트 부스팅</td><td>Friedman (2001), Annals of Statistics</td></tr>
     <tr><td>[4]</td><td>SHAP, TreeExplainer</td><td>Lundberg &amp; Lee (2017), NeurIPS · Lundberg 외 (2020), Nature Machine Intelligence</td></tr>
     <tr><td>[5]</td><td>scikit-learn</td><td>Pedregosa 외 (2011), JMLR</td></tr>
-    <tr><td>[6]</td><td>데이터 누수</td><td>Kaufman 외 (2012), ACM TKDD</td></tr></tbody></table></div>
+    <tr><td>[6]</td><td>데이터 누수</td><td>Kaufman 외 (2012), ACM TKDD</td></tr>
+
+    <tr><td>[7]</td><td>0-1칸 "여기서 잠깐"의 시멘트 기초(정의, 역사, 원료, 제조, 광물, 수화, 종류)</td><td>삼표그룹 블로그 「건축재료학개론 – 시멘트편」(2022-04-14)이 다루는 주제를 따라 시멘트 교과서의 일반 지식으로 풀어 씀. 수치는 대표 범위, 규격(KS L 5201·5210·ISO 679)은 최신판 확인 필요</td></tr>
+</tbody></table></div>
   <h3>예시값 · 설명용 모형인 것</h3>
   <ul>
     <li>cement_process.csv 전체 — 실제 공정 경향을 흉내 낸 교육용 가상 데이터. 실제 공장의 수치가 아니다.</li>
@@ -923,7 +1255,7 @@ display(ok.head(3)[["slag_pct","gypsum_pct","blaine","kiln_temp","pred","cost"]]
 # 주판봇: 가마 원-핫 + 무작위 80/20 (K1~K4 안에서) → 약속 0.835
 # 초파리: 입력 8개, K1~K4에서 가마 하나씩 떼어 시험한 R² 평균 → 약속 0.748
 # 봉투 열기: K1~K4 전체로 학습 → K5·K6 실제 R² (로봇 0.680, 초파리 0.683)</pre></details>
-  <p>글 · 안상선 ((주)M-Robo 대표) · 캐릭터 그림: fruitfly-lab-expressions (저작권 안상선) · 2026-11-03 v1.0</p>
+  <p>글 · 안상선 ((주)M-Robo 대표) · 캐릭터 그림: fruitfly-lab-expressions (저작권 안상선) · 2026-11-03 v1.0 · 2026-11-09 v1.1 쉬운 풀어쓰기판(시멘트 첫걸음·AI 첫걸음, 여기서 잠깐, 조수의 수식 이야기 추가)</p>
 </div>
 </footer>
 <div id="tip" role="tooltip"></div>
