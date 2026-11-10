@@ -1,3 +1,14 @@
+# 이 저장소는 옮겼습니다
+
+「시멘트 품질, AI로 미리 본다」은 강의 통합 저장소 **[AI_for_cement_produce](https://github.com/adminmrobo/AI_for_cement_produce)**의 `ch05_explainable_ai_importance/`(ch05)로 옮겼습니다 (2026-11-10).
+
+- 새 주소: https://adminmrobo.github.io/AI_for_cement_produce/ch05_explainable_ai_importance/
+- 강의 전체 목차: https://adminmrobo.github.io/AI_for_cement_produce/
+
+이 저장소의 공개 페이지는 새 주소로 자동 이동하는 안내 페이지만 남겨 두었습니다. 앞으로의 수정은 통합 저장소에서 합니다. 아래는 옮기기 전 README입니다.
+
+---
+
 # 시멘트 품질, AI로 미리 본다
 
 > 28일을 기다리지 않고, 오늘 만든 시멘트의 강도를 믿을 만한 숫자로 말할 수 있을까?
